@@ -1,0 +1,327 @@
+.hero
+  .container-lg
+    @include xs
+      padding-right: 0
+    @media (max-width: 375px)
+      padding-right: rem(15)  
+  .subtitle
+    font-size: rem(20)
+    font-weight: 500
+    line-height: rem(29)
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    color: $white
+    margin-bottom: rem(20)
+
+    @include md
+      font-size: rem(18)
+      margin-bottom: rem(18)
+
+    span
+      color: $accentcolor
+      margin-left: rem(-5)
+
+  .title
+    user-select: none
+    @include lg
+      margin-bottom: rem(20)
+    @include sm
+      filter: none
+
+    @media (max-width: 375px)
+      filter: drop-shadow(50px -90px 30px rgba($white, .87))
+
+    span
+      font-size: rem(56)
+      line-height: rem(56)
+
+      @include md
+        font-size: rem(40)
+        line-height: rem(43)
+
+      @include sm
+        font-size: rem(30)
+        line-height: rem(30)
+      &.part-mc
+        @include sm
+          text-shadow: 1px 0 1px $white
+        @media (max-width: 375px)
+          text-shadow: none
+  &__col-wrap
+    @include aic-jfcsb
+    position: relative
+    
+    @include lg
+      align-items: flex-start
+
+  &__col
+    width: 50%
+  
+    &:first-child
+      @include md
+        width: 55%
+
+      @include sm
+        width: 100%
+        z-index: 1
+
+    &:last-child
+      @include md
+        width: 45%
+
+      @include sm
+        position: absolute
+        max-width: rem(355)
+        min-width: rem(355)
+        opacity: 0.5
+        top: -20%
+        right: 0
+      @include xs
+        opacity: 0.5
+        overflow: hidden
+      @media (max-width: 375px)
+        display: none
+
+  .users
+    @include aic
+    display: inline-flex
+    position: relative
+    overflow: hidden
+    padding: rem(25) 0
+    padding-right: 10%
+    @include lg
+      padding: rem(15) 0
+      padding-right: 10%
+    @media (max-width: 450px) 
+      padding-right: 0
+
+    &:before,
+    &:after
+      position: absolute
+      content: ''
+      height: rem(1)
+      width: 100%
+      left: 0
+      transition: all .4s
+      background: rgb(255, 255, 255)
+      background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.48503151260504207) 51%, rgba(255, 255, 255, 0) 100%)
+      background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.48503151260504207) 51%, rgba(255, 255, 255, 0) 100%)
+      background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.48503151260504207) 51%, rgba(255, 255, 255, 0) 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1)
+
+    &:before
+      top: 0
+
+    &:after
+      bottom: 0
+
+    &__list
+      @include aic
+      margin-right: rem(25)
+      @include lg
+        margin-right: rem(15)
+
+    &__user
+      width: rem(60)
+      height: rem(60)
+      border-radius: 100%
+      border: rem(2) solid $white
+      @include aic-jcc
+      margin-left: calc(-30px + 6px)
+      overflow: hidden
+      background-color: $white
+
+      @include lg
+        width: rem(50)
+        height: rem(50)
+        margin-left: calc(-25px + 6px)
+
+      @media (max-width: 450px) 
+        margin-left: calc(-30px + 6px)
+      
+      img
+        width: 100%
+        max-width: 100%
+        height: 100%
+
+      &:first-child
+        margin-left: 0
+
+    &__count-wrap
+      font-size: rem(22)
+      line-height: rem(30)
+      @include lg
+        font-size: rem(18)
+        line-height: normal
+
+      p
+        @include md
+          font-size: rem(14)
+
+    &__count
+      color: $white
+      font-weight: 600
+
+  .theme-switch
+    @include aic
+    padding-top: rem(25)
+
+    &__theme-switcher
+      @include aic
+      margin-right: rem(25)
+      @include lg
+        margin-right: rem(15)
+
+      .element
+        width: rem(58)
+        height: rem(58)
+        border-radius: 100%
+        border: rem(2) solid $accentcolor
+        @include aic-jcc
+        margin-left: rem(-30)
+
+        @include lg
+          width: rem(50)
+          height: rem(50)
+          margin-left: rem(-25)
+
+        &:first-child
+          margin-left: 0
+
+        &--switcher
+          background-color: $accentcolor
+          cursor: pointer
+
+          .icon
+            stroke: none
+            width: rem(25)
+            height: rem(25)
+            fill: $white
+    
+    &__desc
+      p
+        br
+          @media (max-width: 450px)
+            display: none
+  &__img
+    position: relative
+    width: 100%
+    transform: translateY(-200px)
+    transition: all 2s
+    opacity: 0
+    max-height: rem(650)
+    min-height: rem(650)
+    
+    @include lg
+      max-height: rem(420)
+      min-height: rem(420)
+
+    @include md
+      max-height: rem(400)
+      min-height: rem(400)
+
+    @include xs
+      margin-left: rem(50)
+    
+    img
+      position: absolute
+      z-index: 1
+      transform-origin: center
+      opacity: 0
+      width: 100%
+      max-width: 100%
+      height: 100%
+      object-fit: contain
+      
+      &.mine
+        z-index: -1
+        filter: drop-shadow(0px 20px 50px rgba($white, .4))
+        @include sm
+          filter: drop-shadow(0px 20px 15px rgba($accentcolor, 1))
+
+    @keyframes bounceImg
+      0%
+        transform: translateY(0) rotate(-.5deg)
+
+      50%
+        transform: translateY(-6px) rotate(.5deg)
+
+      100%
+        transform: translateY(0) rotate(-.5deg)
+
+    @keyframes bounceImgMd
+      0%
+        transform: translateY(0) rotate(-.5deg)
+
+      50%
+        transform: translateY(6px) rotate(.5deg)
+
+      100%
+        transform: translateY(0) rotate(-.5deg)
+
+    &.active
+      transform: translateY(0)
+      opacity: 1
+
+      img
+        opacity: 1
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4)
+          animation-name: bounceImg
+          animation-timing-function: ease
+          animation-duration: 3s
+          animation-iteration-count: infinite
+          
+          @include md
+            animation-name: bounceImgMd
+      svg
+        path
+          fill: $accentcolor
+
+          &:nth-child(2)
+            opacity: 1
+
+          &#check
+            fill: none
+            stroke: $accentcolor
+            stroke-width: 2
+            stroke-dasharray: 4155.41259765625
+            stroke-dashoffset: 4155.41259765625
+            animation: strokeOffset 2.5s linear forwards
+            animation-delay: 2.5s
+
+          &.point
+            animation: point .5s linear forwards
+            animation-delay: 3.6s
+            opacity: 0
+
+  &__img-line
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+    svg
+      width: 100%
+      height: 100%
+
+      path
+        &:nth-child(2)
+          transition: $transition
+          opacity: 0
+          transition-delay: 2.3s
+
+@keyframes strokeOffset
+  to
+    stroke-dashoffset: 0
+
+@keyframes point
+  from
+    opacity: 0
+
+  to
+    opacity: 1

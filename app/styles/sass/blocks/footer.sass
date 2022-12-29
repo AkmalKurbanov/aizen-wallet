@@ -1,0 +1,213 @@
+.footer
+  flex: 0 0 auto
+  padding: rem(76) 0 rem(15)
+  @include lg
+    padding: rem(60) 0 rem(15)
+    @include md
+      padding: rem(50) 0 rem(15)
+    @include sm
+      padding: rem(40) 0 rem(15)
+    @include xs
+      padding: rem(30) 0 rem(15)
+
+  .col-wrap
+    @include sm
+      flex-direction: column
+
+    &__col
+      width: calc( 50% - 30px )
+      &:first-child
+
+        @include lg
+          width: 55%
+
+        @include md
+          width: 65%
+
+        @include sm
+          width: 100%
+
+      &:last-child
+
+        @include lg
+          @include jcc
+          width: 40%
+
+        @include md
+          width: 30%
+
+        @include sm
+          width: 100%
+
+  &__nav
+    @include fww
+
+    &-item
+      width: 33.33%
+      margin-bottom: rem(25)
+      font-size: rem(14)
+      padding-right: rem(10)
+      @include xs
+        width: 50%
+        padding-right: 0
+      li
+        line-height: rem(28)
+      a
+        color: $textcolor
+
+        &:hover
+          color: $accentcolor
+
+  &__item-title
+    color: $white
+    font-weight: 500
+    margin-bottom: rem(15)
+
+  &__app
+    @include aistr
+
+    &-img
+      margin-top: rem(50)
+      margin-right: rem(60)
+      @include aife
+      filter: drop-shadow(100px -9px 120px rgba(255, 255, 255, .25))
+      max-width: rem(157)
+      @include lg
+        display: none
+      img
+        max-width: 100%
+        width: 100%
+        height: 100%
+      @include lg
+        margin-right: rem(30)
+
+    &-links
+      @include fdc-jfcsb
+
+    &-title
+      .title
+        span
+          font-size: rem(32)
+          line-height: rem(32)
+
+          @include lg
+            font-size: rem(25)
+            line-height: rem(25)
+
+    &-platforms
+      @include aife-jfcsb
+
+      img
+        max-width: 100%
+        width: 100%
+        height: 100%
+
+      // @include md
+      //   flex-direction: column        
+        
+
+      @include sm
+        flex-direction: row
+
+      @include xs
+        justify-content: space-between
+    &-platform
+      @include jcc-fdc
+      width: 33.33%
+      margin-right: rem(20)
+
+      @include md
+        width: 100%
+        margin-right: 0
+        text-align: center
+        a
+          padding: 0 rem(2)
+        
+        
+
+      @include sm
+        width: 33.33%
+        margin-right: rem(20)
+        
+        img
+          max-width: rem(110)
+
+      @include xs
+        width: 30%
+
+      &:last-child
+        margin-right: 0
+
+      a
+        color: $white
+        margin-top: rem(8)
+        width: 100%
+
+        &:hover
+          color: $accentcolor
+          
+    &-qr
+      max-width: rem(130)
+      margin: auto
+      @include aic
+
+      img
+        max-width: 100%
+        width: 100%
+        height: 100%
+
+  &__bottom
+    border-top: rem(1) solid $textcolor
+    padding-top: rem(15)
+
+    @include sm
+      margin-top: rem(20)
+
+    &-col-wrap
+      @include aic-jfcsb
+      margin-bottom: rem(15)
+
+  &__copyright
+    font-size: rem(10)
+    text-align: center
+
+  &__lang
+    font-size: rem(14)
+    cursor: pointer
+    position: relative
+
+    &-active
+      @include aic-jcc
+      transition: $transition
+
+      &:hover
+        color: $accentcolor
+
+    .icon
+      margin-left: rem(5)
+      stroke: $textcolor
+      width: rem(10)
+
+    &-dropdown
+      display: none
+      position: absolute
+      bottom: 100%
+      left: rem(-10)
+      width: rem(100)
+      border-radius: rem(6)
+      background: rgba(69, 69, 69, 0.9)
+      filter: blur(12)
+      li
+        &:first-child
+          a
+            padding-top: rem(10)
+        &:last-child
+          a
+            padding-bottom: rem(10)
+              
+        a
+          color: $textcolor
+          display: block
+          padding: 0 rem(10)
+          &:hover
+            color: $accentcolor

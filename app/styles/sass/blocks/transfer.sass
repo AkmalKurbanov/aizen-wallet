@@ -1,0 +1,126 @@
+.transfer
+  &__total
+    @include aistr
+    justify-content: center
+    position: relative
+    padding: rem(40) 0
+
+    @include lg
+      padding: rem(35) 0
+
+    @include md
+      padding: rem(30) 0
+
+    @include xs
+      justify-content: space-between
+
+    &:before,
+    &:after
+      position: absolute
+      content: ''
+      top: 50%
+      transform: translateY(-50%)
+
+      @include xs
+        left: 50%
+        transform: translate(-50%, -50%)
+
+    &:before
+      width: rem(40)
+      height: rem(2)
+      background-color: $white
+      border-radius: rem(2)
+
+      @include xs
+        display: none
+
+    &:after
+      width: 0
+      height: 0
+      border-top: rem(7.5) solid transparent
+      border-left: rem(15) solid $white
+      border-bottom: rem(7.5) solid transparent
+      margin-right: rem(-35)
+
+      @include xs
+        border-top: rem(5) solid transparent
+        border-left: rem(10) solid $white
+        border-bottom: rem(5) solid transparent
+        margin-right: 0
+
+    &-item
+      background: rgba(255, 255, 255, 0.1)
+      backdrop-filter: blur(16px)
+      border-radius: $borderradius24
+      min-width: rem(250)
+      min-height: rem(220)
+      padding: rem(40) rem(15)
+      @include fdc-jfcsb
+      align-items: center
+      text-align: center
+      margin-right: rem(160)
+
+      @include lg
+        border-radius: $borderradius12
+
+      @include sm
+        margin-right: rem(100)
+        min-width: rem(200)
+        min-height: rem(180)
+
+      @include xs
+        margin-right: 0
+        min-width: 47%
+        min-height: auto
+        padding: rem(15) rem(10)
+
+      &:last-child
+        margin-right: 0
+
+    &-sum
+      font-size: rem(60)
+      font-weight: 300
+      color: $white
+
+      @include sm
+        font-size: rem(30)
+
+      @include xs
+        font-size: rem(20)
+        margin: rem(10) 0
+
+    &-currency
+      color: $white
+      position: relative
+      display: inline-block
+      line-height: rem(23)
+
+      &:before
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        height: rem(1)
+        width: 100%
+        background: rgb(146,53,139)
+        background: radial-gradient(circle, rgba(146,53,139,1) 0%, rgba(146,53,139,0.5018382352941176) 50%, rgba(146,53,139,0) 100%)
+
+  &__desc
+    .tab
+      .tabs
+        margin-bottom: rem(25)
+        @include aic-jcc
+        .tab-item
+          margin-right: rem(58)
+          a
+            &:hover
+              color: $accentcolor
+          &.current
+            a
+              color: $accentcolor
+
+          &:last-child
+            margin-right: 0
+      .tab-content
+        text-align: center
+        margin-bottom: rem(25)

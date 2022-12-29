@@ -1,0 +1,144 @@
+extends layouts/main
+block title
+  | сash back
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .hero-full-height
+          .container-lg
+            .title.title--drop-shadow.tac
+              span.part-sh Пополняйте свой счет в  AIZEN <br>
+              span.part-mc любым способом <br>
+              span.part-sh-invert отправляйте деньги дешевле
+            p.tac  Быстро, просто и безопасно пополнить счет наличными
+
+        .container 
+          .txt-img-blur
+            .col-wrap
+              .col-wrap__col
+                .txt-img-blur__text
+                  .title
+                    span.part-sh Быстрое 
+                    span.part-mc пополнение 
+                    span.part-sh-invert наличными 
+                  p Мы сотрудничаем со всеми системами пополнения счетов, чтобы упростить <br>
+                    | пополнение вашего счета AIZEN наличными. Управлять всеми своими <br>
+                    | деньгами прямо в приложении AIZEN стало проще, чем когда-либо!
+
+              .col-wrap__col
+                .txt-img-blur__img
+                  img(loading="lazy" src='images/dist/cashback.webp', alt='' with="172" height="177")    
+
+        .section 
+          .container 
+            .title.tac
+              span.part-sh Пополняй 
+              span.part-mc кошелек 
+              span.part-sh-invert любым способом
+              p.tac Наша экономичная услуга международных денежных переводов проста и быстра в использовании.
+
+            .payment-system
+              .payment-system__list
+                each system, index in systems
+                  .payment-system__list-item
+                    .payment-system__list-logo
+                      img(loading="lazy" src="images/dist/system"+index+".webp", alt="")
+                    .payment-system__list-name=system
+                   
+        .section
+          .container 
+            .title.title--drop-shadow.tac
+              span.part-sh Как пополнить
+
+            .block-count-icon.block-count-icon--flooded-bg
+              each item, index in payment
+                .block-count-icon__item
+                  .block-count-icon__item-icon 
+                    svg.icon.icon--stroke
+                      use(xlink:href='#replenishment'+index)
+                  div   
+                    .block-count-icon__item-title
+                      =index+1+". "
+                      =item.title
+                    .block-count-icon__item-desc=item.desc 
+        
+          
+        
+
+        .section-wrap
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Расположение <br>
+                    span.part-mc рядом с вами
+                    
+                  .desc-part
+                    p Благодаря более чем 78 000 пунктов оплаты по всей <br>
+                      | Евразии найдите ближайший к вам пункт.
+                  .block-control
+                    a(href='#').btn.btn--accent.btn--arrow Подробности
+                      svg.icon
+                        use(xlink:href='#arrow')
+                    a(href='#').question Есть вопросы?
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading="lazy" src='images/dist/location.webp', alt='' with="575" height="575")
+                    
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Контроллируй свой <br>
+                    span.part-mc расходы
+                    
+                  .desc-part
+                    p Ваши деньги поступят на ваш счет в течение часа, чтобы вы <br>
+                      | могли начать тратить, отправлять или сохранять почти <br>
+                      | мгновенно!
+
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading="lazy" src='images/dist/card-in-hand3.webp', alt='' with="575" height="575")
+                    
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Гибкое <br> 
+                    span.part-mc ценообразование
+                  .desc-part
+                    p Стоимость пополнения с помощью выбранной системы <br>
+                      | будет зависеть от вашего плана AIZEN. Плата может <br>
+                      | взиматься, если вы пользуетесь нашими планами Starter <br>
+                      | и Classic, но если вы являетесь клиентом Premium, это <br>
+                      | совершенно бесплатно!
+                  .block-control
+                    a(href='#').btn.btn--accent.btn--arrow Подробности
+                      svg.icon
+                        use(xlink:href='#arrow')
+                    a(href='#').question Есть вопросы?
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading="lazy" src='images/dist/txt-card.webp', alt='' with="575" height="575")
+                    
+
+        
+        include includes/txt-section
+        include includes/gradient-section
+        include includes/comments
+         
+     
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

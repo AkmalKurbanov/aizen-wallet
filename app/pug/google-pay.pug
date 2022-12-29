@@ -1,0 +1,104 @@
+extends layouts/main
+block title
+  | google pay
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .hero-full-height
+          .container-lg
+            .title.title--drop-shadow.tac
+              span.part-mc AIZEN 
+              span.part-sh-invert с Google Pay™
+            p.tac  Легкий и простой способ оплаты картой AIZEN для Android или iOs.
+
+        .container 
+          .txt-img-blur.txt-img-blur--out-of-bounds
+            .col-wrap
+              .col-wrap__col
+                .txt-img-blur__text
+                  .title
+                    span.part-sh Быстро,  
+                    span.part-mc безопасно,  
+                    span.part-sh-invert просто 
+                  p Google Pay — это быстрый и простой способ оплаты в Интернете, в магазине или в приложениях. Оставайтесь защищенными при покупке с зашифрованной безопасностью Google.
+              .col-wrap__col
+                .txt-img-blur__img
+                  img(loading="lazy" src='images/dist/google-pay.webp', alt='' width="167" height="345")    
+
+        .section-wrap
+          
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Оплатить помощью <br>
+                    span.part-mc Google Pay
+                  .desc-part
+                    p Покупайте в Интернете и в приложениях везде, где <br>
+                      | принимается Google Pay.
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading="lazy" src='images/dist/google-pay2.webp', alt='' with="575" height="575")
+                    
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Бесконтактные <br>
+                    span.part-mc платежи
+                  .desc-part
+                    p Совершайте быстрые платежи без карты везде, где <br>
+                      | принимаются бесконтактные платежи — просто ищите <br>
+                      | символ бесконтактной оплаты.
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading="lazy" src='images/dist/google-pay3.webp', alt='' with="575" height="575")
+                    
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Безопасно, <br>
+                    span.part-mc конфиденциально <br>
+                    span.part-sh-invert и без проблем
+                  .desc-part
+                    p Благодаря многоуровневой передовой инфраструктуре <br>
+                      | безопасности ваши платежи AIZEN при использовании <br>
+                      | Google Pay всегда остаются конфиденциальными и защищенными.
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading="lazy" src='images/dist/google-pay4.webp', alt='' with="575" height="575")
+                    
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Настройка 
+                    span.part-mc без стресса
+                  .desc-part
+                    p Быстро добавьте свою карту AIZEN в Google Pay и начните <br>
+                      | совершать покупки простым способом.
+                .col-wrap__col 
+                  .section-text-img__img
+                    img(loading="lazy" src='images/dist/google-pay5.webp', alt='' with="575" height="575")
+                    
+
+        include includes/txt-section
+        include includes/gradient-section
+        include includes/comments
+         
+     
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

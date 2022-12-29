@@ -1,0 +1,86 @@
+.popup
+  position: fixed
+  width: 100%
+  height: 100%
+  @include aic-jcc
+  background-color: rgba($black,.5)
+  pointer-events: none
+  opacity: 0
+  transition: $transition
+  overfloy-y: auto
+  padding: rem(15)
+
+  &__window
+    background: rgba(69, 69, 69, 0.45)
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    backdrop-filter: blur(8px)
+    border-radius: $borderradius24
+    padding: rem(24)
+    @include aic-fdc
+    transition: $transition
+    transition-delay: $transition
+    transform: scale(0)
+    @include lg
+      border-radius: $borderradius12
+    
+    @include xs
+      padding: rem(24) rem(10)
+
+  &__pincode
+    @include aic
+    margin-bottom: rem(40)
+
+    input
+      border-bottom: rem(2) solid $textcolor
+      width: rem(20)
+      font-size: rem(20)
+      margin-right: rem(12)
+      text-align: center
+      color: $white
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button
+        display: none
+
+      &:focus
+        border-color: $accentcolor
+        color: $accentcolor
+
+      &:last-child
+        margin-right: 0
+
+  &__title
+    font-size: rem(32)
+    color: $white
+    margin-bottom: rem(40)
+    @include xs
+      font-size: rem(25)
+      margin-bottom: rem(20)
+
+
+  &__desc
+    margin-bottom: rem(40)
+
+    @include xs
+      margin-bottom: rem(20)
+      font-size: rem(14)
+      br
+        display: none
+
+  button
+    color: $white
+    font-weight: 500
+    margin-top: rem(30)
+    cursor: pointer
+    transition: $transition
+    
+    @include xs
+      margin-top: rem(15)
+
+    &:hover
+      color: $accentcolor
+
+  &.open
+    opacity: 1
+    pointer-events: inherit
+    .popup__window
+      transform: scale(1)

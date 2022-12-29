@@ -1,0 +1,7 @@
+{
+  "svg icon": {
+    "prefix": "i",
+    "body": ["svg.icon", "\tuse(xlink:href='#$1')"],
+    "description": "svg icon"
+  }
+}

@@ -1,0 +1,180 @@
+extends layouts/main
+block title
+  | transfer
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .hero-full-height
+          .container-lg
+            .title.title--drop-shadow.tac
+              span.part-sh Международные денежные <br>
+              span.part-mc переводы – безопасно <br>
+              span.part-sh-invert отправляйте деньги дешевле 
+            p.tac Воспользуйтесь нашим инструментом международных денежных переводов, чтобы узнать, <br>
+              | что вы получите за свои деньги в соответствии с вашим тарифным планом.
+
+            br
+            br
+
+            .transfer
+              .transfer__total
+                mixin transfer(title,sum,cur)
+                  .transfer__total-item
+                    .transfer__total-title=title
+                    .transfer__total-sum=sum
+                    .transfer__total-currency=cur
+                +transfer('Вы посылаете','200','долларов')
+                +transfer('Они получают','190,54','евро')
+              .transfer__desc 
+                .tab
+                  .tabs
+                    .tab-item
+                      a(href="#").accentcolor Классический
+                    .tab-item
+                      a(href="#").accentcolor Премиум
+                  .tab-content  
+                    .tab-content-item Плата за этот план: 1 доллар • = 0,95 евро.
+                    .tab-content-item Плата за этот план: 2 доллара • = 1,95 евро.
+
+                p.tac Это последний обменный курс, который мы использовали для транзакций за последний рабочий день. Курс может измениться <br>
+                  | до того, как вы подтвердите платеж. В Starter мы взимаем комиссию за эту транзакцию по выходным с 16:00 пятницы до 6:00 <br>
+                  | понедельника. Пожалуйста, ознакомьтесь с нашими Условиями для получения подробной информации.
+
+        .section
+          .container
+            .txt-img-blur
+              .col-wrap
+                .col-wrap__col
+                  .txt-img-blur__text
+                    .title
+                      span.part-sh Зарегистрируйте 
+                      span.part-mc учетную запись 
+                      span.part-sh-invert AIZEN
+                    p Загрузите приложение сегодня, чтобы начать тратить и отправлять деньги с помощью AIZEN.
+                    <br>
+                    a.btn.btn--accent(href='#') Начать сейчас
+
+                .col-wrap__col
+                  .txt-img-blur__img
+                    img(loading="lazy" src='images/dist/txt-blur-card.webp', alt='' with="277" height="207")
+    
+        .section-wrap
+          
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Отличные  
+                    span.part-mc международные <br>
+                    span.part-sh-invert обменные курсы
+                  .desc-part
+                    p Рассчитывайте на выгодный обменный курс, когда вы <br>
+                      | отправляете деньги домой с помощью нашей службы <br>
+                      | мобильных денежных переводов. Мы используем оптовые <br>
+                      | обменные курсы в режиме реального времени.<br>
+                      | Вы обнаружите, что наши услуги часто намного дешевле, чем <br>
+                      | отправка денег за границу через традиционные банки.
+                  
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading="lazy" src='images/dist/card-in-hand-small.webp', alt='' with="575" height="575")
+                    
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Безопасное приложение <br>
+                    span.part-mc для международных <br> 
+                    span.part-sh-invert денежных переводов
+                  dp
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading="lazy" src='images/dist/safe-app.webp', alt='' with="575" height="575")
+                    
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Быстрые мобильные <br>
+                    span.part-mc денежные переводы <br>
+                    span.part-sh-invert всех видов
+                  .desc-part
+                    p Настройте быстрые переводы всех видов, включая местные <br>
+                      | и международные платежи. Если ваши переводы <br>
+                      | осуществляются между счетами Monese, они бесплатны и <br>
+                      | мгновенны, независимо от валюты.
+                  .block-control
+                    a(href='#').btn.btn--accent.btn--arrow Подробности
+                      svg.icon
+                        use(xlink:href='#arrow')
+                    a(href='#').question Есть вопросы?
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading="lazy" src='images/dist/women-with-phone.webp', alt='' with="575" height="575")
+                    
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Отправить деньги в <br>
+                    span.part-mc любой валюте
+                  .desc-part
+                    p Хотите выбрать валюту вместо этого? Вот все, что мы <br>
+                      | охватываем. И обязательно проверяйте регулярно, потому <br>
+                      | что мы всегда добавляем больше!
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading="lazy" src='images/dist/phone5.webp', alt='' with="575" height="575")
+
+        br            
+
+        .section
+          .container
+            .title.title--drop-shadow.tac
+              span.part-sh Как использовать наше приложение <br>
+              span.part-mc для международных <br>
+              span.part-sh-invert денежных переводов
+              .tac Наша экономичная услуга международных денежных переводов проста и быстра в использовании.
+
+            .block-count-icon
+              each countIconBlock, index in countIconBlocks
+                .block-count-icon__item
+                  .block-count-icon__item-icon 
+                    svg.icon.icon--stroke
+                      use(xlink:href='#step'+index)
+                  div
+                    .block-count-icon__item-title
+                      =index+1+". "
+                      =countIconBlock.title
+                    .block-count-icon__item-desc=countIconBlock.desc
+                
+            
+
+        
+        
+        include includes/comments
+        
+        .txt-section
+          .container 
+            p What is Aizen?
+            br
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus imperdiet suscipit. Nullam imperdiet eu ex eget maximus. Proin vitae eleifend velit. Mauris aliquam arcu id felis venenatis, non suscipit mi varius. Suspendisse malesuada est id ante mattis consectetur. Maecenas et tortor leo. Donec iaculis id nulla convallis convallis. Mauris vel purus mi.
+              |  Fusce cursus vel ipsum non tristique. Curabitur ornare fermentum faucibus. Etiam venenatis auctor justo, a malesuada turpis imperdiet id. Etiam odio turpis, accumsan nec urna ac, ultricies vestibulum purus. Quisque ullamcorper congue eleifend. Suspendisse potenti. Maecenas lobortis feugiat massa, sit amet maximus turpis tristique sit amet. Aliquam tempor sed metus vitae efficitur. Sed rutrum non nibh nec auctor. Donec rutrum tempus lectus, a faucibus tortor sagittis non. Nulla euismod, eros quis varius mattis, arcu nisl tristique tellus, non blandit nisl risus at ipsum. Nam sit amet vestibulum ligula. Proin quam nulla, porta vel at.
+   
+        include includes/gradient-section
+         
+     
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

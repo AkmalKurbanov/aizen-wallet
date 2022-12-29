@@ -1,0 +1,75 @@
+// USER VARIABLES SECTION
+
+$fontsize: 16px // Body Font Size
+$textcolor: #B0B2B2 // Text Color
+$lineheight: normal // Document Line Height
+$fontname: 'Jost', sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$transition: all .3s ease
+
+$accentcolor: #5740A0 // Accent Color
+$accenthover:#866dd7 // Accent Color hover
+$white: #fff
+$black: #000
+
+$borderradius24: 24px
+$borderradius12: 12px
+	
+// Bootstrap compatible gutter variable => $gutter
+// $grid-gutter-width: 30px
+// $gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'blocks/mixins/_flex'
+@import 'blocks/mixins/_rem'
+@import 'blocks/mixins/_media'
+@import 'node_modules/normalize.css/normalize'
+@import 'node_modules/swiper/swiper-bundle'
+@import 'node_modules/intl-tel-input/build/css/intlTelInput'
+
+
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fontnameame, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fontnameame
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: rgba($accentcolor, .9)
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $fontname
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	// min-width: rem(320)
+	position: relative
+	

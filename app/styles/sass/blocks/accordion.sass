@@ -1,0 +1,43 @@
+.accordion
+  margin: rem(50) 0
+  @include xs
+    margin: rem(30) 0
+
+  &__item
+    margin-bottom: rem(30)
+    padding-left: rem(25)
+    @include md
+      margin-bottom: rem(40)
+    @include sm
+      margin-bottom: rem(35)
+    @include xs
+      margin-bottom: rem(30)
+
+    &:last-child
+      margin-bottom: 0
+
+    &.active
+      .accordion__title
+        .icon
+          transform: rotate(180deg)
+
+  &__title
+    position: relative
+    cursor: pointer
+
+    .icon
+      position: absolute
+      left: rem(-25)
+      top: rem(4)
+      transition: $transition
+      stroke: $textcolor
+      width: rem(14)
+
+  &__desc
+    margin: rem(15) 0
+    display: none
+
+    p
+      margin-bottom: rem(30)
+      &:last-child
+        margin-bottom: 0

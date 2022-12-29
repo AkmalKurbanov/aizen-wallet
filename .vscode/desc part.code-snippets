@@ -1,0 +1,9 @@
+{
+	"desc part": {
+		"prefix": "dp",
+		"body": [
+			".desc-part\n\tp text\n.block-control\n\ta(href='#').btn.btn--accent.btn--arrow Подробности\n\t\tsvg.icon\n\t\t\tuse(xlink:href='#arrow')\n\ta(href='#').question Есть вопросы?"
+		],
+		"description": "desc part"
+	}
+}

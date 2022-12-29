@@ -1,0 +1,30 @@
+extends layouts/main
+block title
+  | login
+block main
+  .wrapper
+    .content
+        include includes/header/header-without-nav
+        
+        .login 
+          .container
+            .login__top  
+              .title.title--drop-shadow.tac
+                span.part-sh Войдите в свою учетную запись <br>
+                span.part-mc AIZEN, 
+                span.part-sh-invert где бы вы ни находились
+
+              form.login__form
+                .input
+                  input#phone(name='number' type='tel' placeholder="Номер телефона")
+                button(type='submit').btn.btn--light Далее
+            .login__bottom  
+                a.btn.btn--accent(href="#") Создать пароль веб-приложения
+                a(href="#").login__bottom-link У вас нет учетной записи AIZEN?
+         
+     
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

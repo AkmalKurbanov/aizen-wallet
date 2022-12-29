@@ -1,0 +1,58 @@
+extends layouts/main
+block title
+  | password
+block main
+  .wrapper
+    .content
+        include includes/header/header-without-nav
+        
+        .login 
+          .container
+            .login__top  
+              .title.title--drop-shadow.tac
+                span.part-sh Какой у тебя пароль?
+
+              form.login__form
+                .input.input--pass
+                  input#pass(type="password" placeholder="Пароль")
+                  .show-pass
+                    svg.icon.icon--stroke
+                      use(xlink:href='#eye')
+                  .hide-pass
+                    svg.icon.icon--stroke
+                      use(xlink:href='#eye')
+            .login__bottom  
+                a.btn.btn--accent(href="#") Авторизоваться
+                a(href="#").login__bottom-link.forget-pass-js Забыли пароль?
+         
+
+    .popup#forget-pass
+      .popup__window   
+        .popup__title.tac Забыли пароль?
+        .popup__desc.tac Мы отправим запрос на ваш телефон, чтобы <br>
+          | вы могли войти и создать новый пароль.
+        a(href="#").btn.btn--accent#submit-inquiry Послать запрос
+        button.popup-close-js Отмена   
+
+    .popup#code
+      .popup__window   
+        .popup__title.tac Введите код из SMS
+        .popup__pincode 
+          input(type="number")
+          input(type="number")
+          input(type="number")
+          input(type="number")
+          input(type="number")
+          input(type="hidden" name="pincode")
+        .popup__desc.tac Войдите в свое приложение AIZEN и <br>
+          | проверьте новый запрос на вход в Интернет. <br>
+          | Вы получите 4-значный код для ввода здесь. <br>
+          | Пожалуйста, убедитесь, что вы используете <br>
+          | актуальную версию приложения.
+        a(href="#").btn.btn--accent Послать запрос
+        button.popup-close-js Отмена      
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

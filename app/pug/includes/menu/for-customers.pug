@@ -1,0 +1,63 @@
+.header__item-content.tab.dropdown
+  .header__content-col
+    .header__content-tabs.tabs
+      mixin menuItem(title, desc, sliderOff)
+        .header__content-item.tab-item
+          .header__content-item-title
+            a(href="#")=title
+          .header__content-item-desc=desc
+      +menuItem('Создать аккаунт', 'Необходимые траты — тоже с AIZEN')    
+      +menuItem('Банконская карта', 'Платите виртуалкой или пластиком')    
+      +menuItem('Переводы', 'Получитите или отправьте деньги')    
+      +menuItem('Кэбэк и акции', 'На ваши желания')    
+      +menuItem('Google Pay', 'Плати с помощью телефона')    
+      +menuItem('Криптовалюты', 'Инвестируй цифровые активы')    
+
+  .header__content-col
+    .header__content-info
+      .header__content-tab-content.tab-content
+        mixin tabItem(title, desc, sliderOff, link)
+          if sliderOff
+            .header__content-tab-item.tab-content-item(style="justify-content: flex-start;")
+              .header__content-inside-wrap
+                .header__content-item-title
+                  span=title
+                .header__content-item-desc=desc
+              
+              .header__content-inside-wrap
+               a(href=link).btn.btn--light.btn--full Подробнее
+          else
+            .header__content-tab-item.tab-content-item
+              .header__content-inside-wrap
+                .header__content-item-title
+                  span=title
+                .header__content-item-desc=desc
+              
+              .header__content-inside-wrap
+                .header__content-info-slider
+                  .swiper.menu-nav-js
+                    .swiper-pagination
+                    .swiper-wrapper
+                      mixin slide(img)
+                        .swiper-slide 
+                          .header__content-slider-img
+                            img(loading="lazy" src="images/dist/menu-img"+img+".webp", alt="") 
+                      block 
+                    a(href=link).btn.btn--light.btn--full Подробнее 
+            
+
+                
+                  
+          
+          
+        +tabItem('Переводы - просто1','Оплачивайте кредиты кошельком. Поможем не пропустить платеж','','https://www.youtube.com/watch?v=iqcLm0fyvR0')            
+          +slide('1')
+          +slide('1')
+          +slide('1')
+          +slide('1')
+        +tabItem('Переводы - просто2','Оплачивайте кредиты кошельком. Поможем не пропустить платеж','sliderOff','#')            
+        +tabItem('Переводы - просто3','Оплачивайте кредиты кошельком. Поможем не пропустить платеж','sliderOff','#')            
+        +tabItem('Переводы - просто4','Оплачивайте кредиты кошельком. Поможем не пропустить платеж','sliderOff','#')            
+        +tabItem('Переводы - просто5','Оплачивайте кредиты кошельком. Поможем не пропустить платеж','sliderOff','#')            
+        +tabItem('Переводы - просто6','Оплачивайте кредиты кошельком. Поможем не пропустить платеж','sliderOff','#')            
+        

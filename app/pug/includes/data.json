@@ -1,0 +1,347 @@
+{
+  "_comment1": "Комментарии-Отзывы начало",
+  "comments": [
+    {
+      "title": "I and my partner were fin…",
+      "text": "I and my partner were finding it <br> difficult opening a joint bank <br> account but monese wa...",
+      "name": "Nayim Uddin,",
+      "date": "August 15"
+    },
+    {
+      "title": "I and my partner were fin…",
+      "text": "I and my partner were finding it <br> difficult opening a joint bank <br> account but monese wa...",
+      "name": "Nayim Uddin,",
+      "date": "August 15"
+    },
+    {
+      "title": "I and my partner were fin…",
+      "text": "I and my partner were finding it <br> difficult opening a joint bank <br> account but monese wa...",
+      "name": "Nayim Uddin,",
+      "date": "August 15"
+    },
+    {
+      "title": "I and my partner were fin…",
+      "text": "I and my partner were finding it <br> difficult opening a joint bank <br> account but monese wa...",
+      "name": "Nayim Uddin,",
+      "date": "August 15"
+    },
+    {
+      "title": "I and my partner were fin…",
+      "text": "I and my partner were finding it <br> difficult opening a joint bank <br> account but monese wa...",
+      "name": "Nayim Uddin,",
+      "date": "August 15"
+    },
+    {
+      "title": "I and my partner were fin…",
+      "text": "I and my partner were finding it <br> difficult opening a joint bank <br> account but monese wa...",
+      "name": "Nayim Uddin,",
+      "date": "August 15"
+    }
+  ],
+  "comment1_": "Комментарии-Отзывы конец",
+
+  "_comment2": "Пункты меню footer начало",
+  "footerMenu": [
+    {
+      "title": "Частным клиентам",
+      "list": [
+        {
+          "menuItem": "Создать аккаунт",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Банковская карта",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Переводы",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Кешбек",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Google Pay",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Криптавалюты",
+          "menuItemLink": "#"
+        }
+      ]
+    },
+    {
+      "title": "Бизнес клиентам",
+      "list": [
+        {
+          "menuItem": "Аккаунт для бизнеса",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Криптокашелек для бизнеса",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Прием онлайн платежей",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Цифровой терминал",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Карта для бизнеса",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "B2B платёжи",
+          "menuItemLink": "#"
+        }
+      ]
+    },
+    {
+      "title": "Компания",
+      "list": [
+        {
+          "menuItem": "О нас",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Блог",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Карьера",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Партнеры",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Roadmap",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Инвесторам",
+          "menuItemLink": "#"
+        }
+      ]
+    },
+    {
+      "title": "Помощь",
+      "list": [
+        {
+          "menuItem": "Вопрос & Ответ",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Задать вопрос?",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Поддержка клиентов",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Документация",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Контакты",
+          "menuItemLink": "#"
+        }
+      ]
+    },
+    {
+      "title": "Функции",
+      "list": [
+        {
+          "menuItem": "Foreign nationals",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Basic account",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Travel money card",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Expatrio",
+          "menuItemLink": "#"
+        }
+      ]
+    },
+    {
+      "title": "Информация",
+      "list": [
+        {
+          "menuItem": "Тарифы и ограничения",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Файлы cookie",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Условия использования",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Политика конфеденцальности",
+          "menuItemLink": "#"
+        },
+        {
+          "menuItem": "Impressum",
+          "menuItemLink": "#"
+        }
+      ]
+    }
+  ],
+  "comment2_": "Пункты меню footer конец",
+
+  "_comment3": "Инфо о приложении, ссылки на скачивание footer начало",
+  "platforms": [
+    {
+      "linkTitle": "Скачать",
+      "linkDownload": "#",
+      "platformImage": "platform1.webp"
+    },
+    {
+      "linkTitle": "Скоро",
+      "linkDownload": "#",
+      "platformImage": "platform2.webp"
+    },
+    {
+      "linkTitle": "Скоро",
+      "linkDownload": "#",
+      "platformImage": "platform3.webp"
+    }
+  ],
+  "qrCode": "qr.webp",
+  "appImg": "app-img.webp",
+  "comment3_": "Инфо о приложении, ссылки на скачивание footer конец",
+
+  "_comment4": "Копирайт начало",
+  "copyright": " © 2023 AIZEN LLC.Компания AIZEN LLC, зарегистрированный в Кыргызской Республике. Юридический адрес: ул. Кызыл-кийская 186, 720072, г. Бишкек, Кыргызстан (рег. №: 190058-3301-ООО). <br> AIZEN LLC в процессе получения лицензии платежной системы и оператора платежных систем НБКР. AIZEN LLC предоставляет услуги по осуществлению платежей и открытию цифровых кошельков до востребования.",
+  "comment4_": "Копирайт конец",
+
+  "_comment5": "Языки начало",
+  "langs": [
+    { "lang": "Кыргыз тили", "flag": "kg", "link": "#" },
+    { "lang": "Türkçe", "flag": "tr", "link": "#" },
+    { "lang": "English", "flag": "uk", "link": "#" },
+    { "lang": "Deutsch", "flag": "de", "link": "#" },
+    { "lang": "Русский", "flag": "ru", "link": "#" }
+  ],
+  "comment5_": "Языки конец",
+
+  "_comment6": "Страны начало",
+  "countries": [
+    { "country": "Кыргызстан", "flag":"kg", "link": "#" },
+    { "country": "Türkiye", "flag": "tr", "link": "#" },
+    { "country": "United Kingdom", "flag": "uk", "link": "#" },
+    { "country": "Deutschland", "flag": "de", "link": "#" },
+    { "country": "Россия", "flag": "ru", "link": "#" }
+  ],
+  "comment6_": "Страны конец",
+
+  "_comment7": "footer локализация начало",
+  "socials": [
+    {
+      "img": "discord",
+      "link": "#"
+    },
+    {
+      "img": "telegram",
+      "link": "#"
+    },
+    {
+      "img": "linkedin",
+      "link": "#"
+    },
+    {
+      "img": "instagram",
+      "link": "#"
+    },
+    {
+      "img": "youtube",
+      "link": "#"
+    },
+    {
+      "img": "twitter",
+      "link": "#"
+    }
+  ],
+  "comment7_": "footer локализация конец",
+
+  "_comment8": "footer локализация начало",
+  "countIconBlocks": [
+    {
+      "title": "Зарегистрируйте учетную запись AIZEN",
+      "desc": "Загрузите наше приложение и зарегистрируйте учетную запись AIZEN, указав несколько основных сведений. Открытие счета быстро и легко."
+    },
+    {
+      "title": "Выберите вариант оплаты",
+      "desc": "Выберите опцию «Оплатить» в нижнем меню вашего приложения AIZEN."
+    },
+    {
+      "title": "Выберите, кому вы отправляете",
+      "desc": "Нажмите «Новый платеж» и введите данные получателя — или быстро выберите кого-то, кому вы платили раньше, или кого-то из ваших контактов AIZEN."
+    },
+    {
+      "title": "Введите сумму, которую хотите отправить",
+      "desc": "Сообщите нам сумму, которую вы хотите отправить. Мы заранее покажем вам наши сборы, которые варьируются в зависимости от вашего плана AIZEN ."
+    },
+    {
+      "title": "Подберите валюту",
+      "desc": "Убедитесь, что валюта соответствует месту назначения, например, при отправке INR в Индию. Это связано с тем, что мы используем услуги одноранговых денежных переводов."
+    },
+    {
+      "title": "Подтвердите платеж",
+      "desc": "Проверьте правильность данных, подтвердите платеж и позвольте нам позаботиться обо всем остальном. Вы можете сначала внести изменения, если вам это нужно."
+    }
+  ],
+  "comment8_": "footer локализация конец",
+
+  "_comment9": "платежные системы начало",
+  "systems": [
+    "Сбербанк",
+    "Тинькофф",
+    "Элкарт",
+    "Wallet One",
+    "Элсом",
+    "Balance",
+    "Visa",
+    "Умай",
+    "O! Терминал",
+    "Оптима",
+    "MasterCard",
+    "Namba One"
+  ],
+  "comment9_": "платежные системы конец",
+
+  "_comment10": "как пополнить начало",
+  "payment": [
+    {
+      "title": "Откройте свое приложение",
+      "desc": "Перейдите в раздел «Добавить деньги» в приложении AIZEN и выберите способ."
+    },
+    {
+      "title": "Получите свой штрих-код",
+      "desc": "Настройте свой профиль в программе, и мы создадим для вас штрих-код."
+    },
+    {
+      "title": "Найдите свое местоположение",
+      "desc": "Найдите на карте ближайший к вам пункт оплаты и вперед. Штрих-код действителен в течение 2 часов."
+    },
+    {
+      "title": "Добавьте свои деньги",
+      "desc": "Передайте кассиру свой штрих-код, отдайте ему наличные, и они будут безопасно добавлены на ваш счет в AIZEN."
+    }
+  ],
+  "comment10_": "как пополнить конец"
+}

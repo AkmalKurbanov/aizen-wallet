@@ -1,0 +1,8 @@
+{
+	"section img txt": {
+		"prefix": "txtimg",
+		"body": ".section\n\t.container\n\t\t.col-wrap.section-text-img\n\t\t\t.col-wrap__col\n\t\t\t\ttt\n\t\t\t\tdp\n\t\t\t.col-wrap__col\n\t\t\t\t.section-text-img__img\n\t\t\t\t\timg(loading="lazy" src='images/dist/img.webp', alt='')\n\t\t\t\t\t.section-text-img__bg\n\t\t\t\t\t\tul\n\t\t\t\t\t\t\tli\n\t\t\t\t\t\t\tli\n\t\t\t\t\t\t\tli\n\t\t\t\t\t\tul\n\t\t\t\t\t\t\tli\n\t\t\t\t\t\t\tli\n\t\t\t\t\t\t\tli",
+		"description": "section img txt"
+	}
+}
+

@@ -1,0 +1,19 @@
+{
+  "txt img blur": {
+    "prefix": "txtimgblur",
+    "body": [
+			".txt-img-blur",
+			"\t.col-wrap",
+			"\t\t.col-wrap__col",
+			"\t\t\t.txt-img-blur__text",
+			"\t\t\t\ttt",
+			"\t\t\t\tp text",
+			"\t\t\t\t<br>",
+			"\t\t\t\ta.btn.btn--accent(href='#') text",
+			"\t\t.col-wrap__col",
+			"\t\t\t.txt-img-blur__img",
+			"\t\t\t\timg(loading="lazy" src='images/dist/', alt='')",
+	],
+    "description": "txt img blur"
+  }
+}

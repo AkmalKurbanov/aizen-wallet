@@ -1,0 +1,9 @@
+{
+	"title": {
+		"prefix": "tt",
+		"body": [
+			".title\n\tspan.part-sh part-sh\n\tspan.part-mc part-mc\n\tspan.part-sh-invert part-sh-invert"
+		],
+		"description": "title"
+	}
+}

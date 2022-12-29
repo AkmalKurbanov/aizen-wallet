@@ -1,0 +1,64 @@
+.header__item-content.tab.dropdown
+  .header__content-col
+    .header__content-tabs.tabs
+      mixin menuItem(title, desc, sliderOff)
+        .header__content-item.tab-item
+          .header__content-item-title
+            a(href="#")=title
+          .header__content-item-desc=desc
+      +menuItem('Приём платежей', 'Онлайн-эквайринг для бизнеса')    
+      +menuItem('Карта для бизнеса', 'Подключение, абоненская плата — 0₽')    
+      +menuItem('Цифровой терминал', 'Прием платежей где угодно')    
+      +menuItem('Криптокашелей для бизнеса', 'Оплачивайте и получайте')    
+      +menuItem('Заплатить по частям', 'Продажи в кредит и рассрочку')    
+      +menuItem('B2B-платежи', 'Приём оплаты от юридических лиц')    
+
+  .header__content-col
+    .header__content-info
+      .header__content-tab-content.tab-content
+        mixin tabItem(title, desc, sliderOff, link)
+          if sliderOff 
+            .header__content-tab-item.tab-content-item(style="justify-content: flex-start;")
+              .header__content-inside-wrap
+                .header__content-item-title
+                  span=title
+                .header__content-item-desc=desc
+              
+              .header__content-inside-wrap
+               a(href=link).btn.btn--light.btn--full Подробнее1
+          else
+            .header__content-tab-item.tab-content-item
+              .header__content-inside-wrap
+                .header__content-item-title
+                  span=title
+                .header__content-item-desc=desc
+              
+              .header__content-inside-wrap
+                .header__content-info-slider
+                  .swiper.menu-nav-js
+                    .swiper-pagination
+                    .swiper-wrapper
+                      mixin slide(img)
+                        .swiper-slide 
+                          .header__content-slider-img
+                            img(loading="lazy" src="images/dist/menu-img"+img+".webp", alt="") 
+                      block 
+                    a(href=link).btn.btn--light.btn--full Подробнее 
+            
+
+                
+                  
+          
+          
+        +tabItem('Аккаунт для бизнеса1','Так же просто, как управлять обычной банковской картой','','https://www.youtube.com/watch?v=vNktZi3zQX0')            
+          +slide('2')
+          +slide('2')
+          +slide('2')
+          +slide('2')
+        +tabItem('Аккаунт для бизнеса2','Так же просто, как управлять обычной банковской картой','sliderOff','#')            
+        +tabItem('Аккаунт для бизнеса3','Так же просто, как управлять обычной банковской картой','sliderOff','#')            
+        +tabItem('Аккаунт для бизнеса4','Так же просто, как управлять обычной банковской картой','sliderOff','#')            
+        +tabItem('Аккаунт для бизнеса5','Так же просто, как управлять обычной банковской картой','sliderOff','#')            
+        +tabItem('Аккаунт для бизнеса6','Так же просто, как управлять обычной банковской картой','sliderOff','#')            
+
+        

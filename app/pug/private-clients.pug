@@ -1,0 +1,53 @@
+extends layouts/main
+block title
+  | for private clients
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .hero-full-height
+          .container-lg
+            .title.title--drop-shadow.tac
+              span.part-sh Мгновенное 
+              span.part-mc открытие 
+              span.part-sh-invert счета 
+            p.tac No proof of address, no credit checks, no extra documents required to join
+
+            
+            .txt-img-blur
+              .col-wrap
+                .col-wrap__col
+                  .txt-img-blur__text
+                    .title
+                      span.part-sh Создайте 
+                      span.part-mc аккаунт 
+                      span.part-sh-invert мгновенно
+                    p Download the app today to start spending and sending with Monese.
+                    <br>
+                    a(href="#").btn.btn--accent Перейти к скачиванию
+                .col-wrap__col
+                  .txt-img-blur__img
+                    img(loading="lazy" src="images/dist/logo-box.webp", alt="" with="120" height="120")
+
+        
+        include includes/partner
+        
+        .section-wrap
+          include includes/future
+          include includes/multilang
+          include includes/protect
+          include includes/fast
+          include includes/making
+          include includes/inclusive
+          include includes/way
+        include includes/txt-section
+        include includes/gradient-section
+        //- include includes/comments
+         
+     
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

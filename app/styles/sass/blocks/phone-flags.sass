@@ -1,0 +1,27 @@
+.iti__flag
+  background-image: url("../images/dist/flags/flags.webp")
+
+.iti__arrow
+  border-top-color: $white
+
+.iti__arrow--up
+  border-top-color: $accentcolor
+
+.iti--allow-dropdown
+  @include aic
+
+.iti__flag-container
+  position: relative
+  left: auto!important
+  border: rem(1) solid $textcolor
+  border-radius: rem(12)
+  height: rem(40)
+  padding: rem(10)
+  min-width: rem(120)
+  margin-right: rem(15)
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+  .iti__flag
+    background-image: url("../images/dist/flags/flags@2x.webp")
+
+

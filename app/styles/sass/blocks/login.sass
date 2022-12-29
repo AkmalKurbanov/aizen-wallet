@@ -1,0 +1,34 @@
+.login
+  height: calc( 100vh - 104px )
+  @include aic-jcc
+
+  .input
+    margin-right: rem(15)
+    @include xs
+      margin-right: 0
+      margin-bottom: rem(15)
+
+  #phone
+    min-width: rem(260)
+    width: 100%
+    padding: rem(10)!important
+
+    @include xs
+      margin: auto
+
+  &__form
+    @include aic-jcc
+
+    @include xs
+      flex-direction: column
+
+  &__top
+    margin-bottom: rem(150)
+
+  &__bottom
+    @include aic-fdc
+
+    &-link
+      color: $white
+      font-weight: 500
+      margin-top: rem(25)

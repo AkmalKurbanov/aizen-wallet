@@ -1,0 +1,214 @@
+.count-items
+  padding-top: rem(100)
+
+  @include lg
+     padding-top: rem(50)
+
+  @include md
+    padding-top: 0
+
+  &__wrap
+    counter-reset: section
+    @include aife
+    @include md
+      flex-direction: column
+      align-items: flex-start
+
+  &__item
+    width: 33.33%
+    overflow: hidden
+    transition: $transition
+    position: relative
+    padding: rem(24)
+    cursor: pointer
+    @include lg
+      padding: rem(12)
+    @include md
+      width: 100%
+      border-radius: 0!important
+      background: none!important
+      margin-bottom: rem(20)
+      padding: 0
+      overflow: visible
+    &:after
+      position: absolute
+      content: ''
+      background: rgba(32, 32, 32, 1)
+      width: 100%
+      height: 100%
+      @include md
+        display: none
+
+    &:first-child
+      border-radius: $borderradius24 0 0 $borderradius24
+      background: rgb(255, 255, 255)
+      background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.48503151260504207) 51%, rgba(255, 255, 255, 0) 100%)
+      background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.48503151260504207) 51%, rgba(255, 255, 255, 0) 100%)
+      background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.48503151260504207) 51%, rgba(255, 255, 255, 0) 100%)
+      
+      @include lg
+        border-radius: $borderradius12 0 0 $borderradius12
+   
+      &:after
+        width: calc(100% - 2px)
+        height: calc(100% - 2px)
+        border-radius: $borderradius24 0 0 $borderradius24
+        right: 0
+        top: rem(1)
+
+        @include lg
+          border-radius: $borderradius12 0 0 $borderradius12
+
+      .count-items__hiddent
+        border-radius: $borderradius24 $borderradius24 0 $borderradius24
+
+        @include lg
+          border-radius: $borderradius12 $borderradius12 0 $borderradius12
+        
+    &:nth-child(2)
+      &:after
+        top: rem(1)
+        left: 0
+        width: 100%
+        height: calc(100% - 2px)
+
+    &:last-child
+      border-radius: 0 $borderradius24 $borderradius24 0
+      background: rgb(255, 255, 255)
+      background: -moz-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.48503151260504207) 51%, rgba(255, 255, 255, 0) 100%)
+      background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.48503151260504207) 51%, rgba(255, 255, 255, 0) 100%)
+      background: linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.48503151260504207) 51%, rgba(255, 255, 255, 0) 100%)
+     
+      @include lg
+        border-radius: 0 $borderradius12 $borderradius12 0
+     
+      @include md
+        margin-bottom: 0
+     
+      &:after
+        width: calc(100% - 1px)
+        height: calc(100% - 2px)
+        border-radius: 0 $borderradius24 $borderradius24 0
+        left: 0
+        top: rem(1)
+
+        @include lg
+          border-radius: 0 $borderradius12 $borderradius12 0
+
+      .count-items__hiddent
+        border-radius: $borderradius24 $borderradius24 $borderradius24 0
+        
+        @include lg
+          border-radius: $borderradius12 $borderradius12 $borderradius12 0
+
+    p
+      @include md
+        display: none
+    p,
+    a
+      position: relative
+      z-index: 1
+      font-size: rem(20)
+      color: $white
+      font-weight: 600
+      line-height: rem(28)
+      @include lg
+        font-size: rem(15)
+        line-height: rem(23)
+
+    &:hover
+      overflow: visible
+
+      .count-items__hiddent
+        opacity: 1
+        transform: scale(1)
+
+  &__count
+    font-size: rem(24)
+    font-weight: 600
+    margin-bottom: rem(15)
+    color: $accentcolor
+    position: relative
+    z-index: 1
+
+    @include lg
+      font-size: rem(19)
+      margin-bottom: rem(5)
+
+    @include md
+      display: none
+
+  &__hiddent
+    position: absolute
+    opacity: 0
+    bottom: 0
+    left: 0
+    transition: $transition
+    width: 100%
+    background-color: $accentcolor
+    z-index: 1
+    padding: rem(24)
+    border-radius: $borderradius24 $borderradius24 0 0
+    transform: scale(.8)
+    @include lg
+      padding: rem(12)
+      border-radius: $borderradius12 $borderradius12 0 0
+
+
+    @include md
+      position: relative
+      opacity: 1
+      border-radius: rem(12)!important
+      transform: scale(1)
+
+    .count-items__count
+      color: $white
+      @include md
+        display: block
+    p
+      @include md
+        display: block
+    
+    &:before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      border-radius: rem(12)
+      background: rgb(87,64,160)
+      background: radial-gradient(circle, rgba(87,64,160,0.8407738095238095) 0%, rgba(87,64,160,0.5130427170868348) 50%, rgba(87,64,160,0.3449754901960784) 100%)  
+      display: none
+      z-index: -9
+      @include md
+        display: block
+
+  &__desc
+    position: relative
+    z-index: 1
+    margin-top: rem(10)
+    transition: $transition
+    @include md
+      display: block
+    p
+      color: rgba($white, .9)
+      font-weight: 400
+      @include lg
+        font-size: rem(14)
+        line-height: rem(17)
+
+    a
+      transition: $transition
+      display: inline-block
+      margin-top: rem(10)
+
+      .icon
+        position: absolute
+        transition: $transition
+        opacity: 0
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+      &:hover
+        .icon
+          opacity: 1
+          right: rem(-24)
