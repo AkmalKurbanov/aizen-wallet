@@ -1,0 +1,25 @@
+.bread-crumbs
+  ul
+    @include aic
+    
+    li
+      font-size: rem(14)
+      @include aic
+
+      a
+        color: $accentcolor
+        
+      .icon
+        stroke: $textcolor
+        transform: rotate(-90deg)
+        width: rem(10)
+        margin: 0 rem(10)
+
+      &:last-child
+        cursor: default
+
+        .icon
+          display: none  
+        
+
+

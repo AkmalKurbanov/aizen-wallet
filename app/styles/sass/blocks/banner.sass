@@ -1,0 +1,32 @@
+.banner
+  position: relative
+  min-height: rem(320)
+  @include aic-jcc
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  margin-top: rem(100)
+  padding: 0 rem(15)
+  
+  @include lg
+    margin-top: rem(80)
+    min-height: rem(290)
+
+  @include md
+    margin-top: rem(60)
+    min-height: rem(260)
+
+  @include sm
+    margin-top: rem(40)
+    min-height: rem(230)
+
+  @media (min-width: 575px)
+    background-attachment: fixed
+
+  &:after
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    background: linear-gradient(180deg, #0D0C0E 0%, rgba(13, 12, 14, 0) 50.15%, #0D0C0E 100%), linear-gradient(0deg, rgba(146, 53, 139, 0.1), rgba(146, 53, 139, 0.1))
+    z-index: 1

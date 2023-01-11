@@ -15,7 +15,7 @@ block main
             p.tac  Быстро, просто и безопасно пополнить счет наличными
 
         .container 
-          .txt-img-blur
+          .txt-img-blur.typical-block
             .col-wrap
               .col-wrap__col
                 .txt-img-blur__text
@@ -54,7 +54,7 @@ block main
 
             .block-count-icon.block-count-icon--flooded-bg
               each item, index in payment
-                .block-count-icon__item
+                .block-count-icon__item.typical-block
                   .block-count-icon__item-icon 
                     svg.icon.icon--stroke
                       use(xlink:href='#replenishment'+index)

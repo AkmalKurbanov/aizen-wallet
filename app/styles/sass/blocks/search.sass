@@ -1,0 +1,46 @@
+.search
+  width: 100%
+  text-align: center
+  z-index: 3
+  position: relative
+
+  &__inclder
+    margin: auto
+    margin: auto
+ 
+  &__input
+    position: relative
+    max-width: rem(600)
+    width: 100%
+    margin: auto
+
+    input
+      background: rgba(38, 36, 48, 0.6)
+      backdrop-filter: blur(16px) 
+      border-radius: $borderradius12
+      padding: rem(10) rem(50) rem(10) rem(15)
+      color: $white
+      height: rem(42)
+      width: 100%
+      font-size: rem(18)
+
+      &:placeholder
+        color: $textcolor
+      
+    button
+      width: rem(24)
+      height: rem(24)
+      position: absolute  
+      top: 50%
+      transform: translateY(-50%)
+      right: rem(15)
+      @include aic-jcc
+      cursor: pointer
+
+      .icon
+        transition: $transition
+        stroke:$textcolor
+
+      &:hover
+        .icon
+          stroke: $white

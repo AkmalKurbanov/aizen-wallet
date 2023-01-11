@@ -55,13 +55,9 @@
 
     .block-count-icon__item
       padding: rem(20) rem(15)
-      background: rgba(255, 255, 255, 0.1)
-      backdrop-filter: blur(16px)
-      border-radius: $borderradius24
       @include aic-fdc
 
-      @include lg
-        border-radius: $borderradius12
+      
 
     .block-count-icon__item-icon
       margin-right: 0
@@ -73,4 +69,40 @@
         width: rem(35)
         height: rem(35)
 
-       
+  &--accent-bg
+
+    .block-count-icon__item
+      background: linear-gradient(98.38deg, rgba(54, 42, 96, 0.5) 0%, rgba(87, 64, 160, 0.5) 100.08%)     
+      padding: rem(30)
+      width: calc( 50% - 10px )
+      margin-bottom: rem(20)
+      text-align: center
+      flex-direction: column
+      align-items: center
+
+      @include lg
+        padding: rem(25)
+
+      @include md
+        padding: rem(20)
+        
+      @include sm
+        width: 100%
+        padding: rem(15)
+
+      .block-count-icon__item-title
+        @include aic-jcc
+
+      .block-count-icon__item-icon
+        margin-right: rem(15)
+        width: rem(40)
+        height: rem(40)
+        margin-top: 0
+
+        @include lg
+          width: rem(30)
+          height: rem(30)
+
+        .icon 
+          width: 100%
+          height: 100%  

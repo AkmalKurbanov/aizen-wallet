@@ -1,0 +1,46 @@
+.tabs-link
+  @include aic-jfcsb
+  
+  @include sm
+    flex-direction: column
+
+  &__item
+    width: calc(33.33% - 40px)
+    color: $white
+    
+    @include lg
+      width: calc(33.33% - 15px)
+
+    @include md
+      width: calc(33.33% - 10px)
+    
+    @include sm 
+      margin-bottom: rem(10)
+      width: 100%
+
+    &:last-child
+      @include xs 
+        margin-bottom: 0
+         
+    a
+      @include aic-jcc
+      color: $white
+      padding: rem(24) rem(15)
+      
+      @include lg
+        padding: rem(20) rem(10)
+
+      @include md
+        padding: rem(15) rem(10)
+
+      @include xs
+        font-size: rem(14)
+
+      
+      &:hover
+        background-color: $accentcolor
+
+        
+      
+
+      

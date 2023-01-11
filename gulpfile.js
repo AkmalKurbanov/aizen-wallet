@@ -42,6 +42,8 @@ import extReplace from 'gulp-ext-replace'
 
 
 
+
+
 import {
 	deleteAsync
 } from 'del'
@@ -146,7 +148,7 @@ async function images() {
 	await imagemin(['app/images/src/**/*.{jpg,png,svg,webp,ico}'], {
 		destination: 'app/images/dist',
 		plugins: [
-			imageminWebp({ quality: 80 })
+			imageminWebp({ quality: 100 })
 		]
 	})
 	browserSync.stream()

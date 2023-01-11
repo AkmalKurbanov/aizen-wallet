@@ -17,17 +17,20 @@ header.header
 
       .header__col 
         .header__col-control
-          .header__lang.header__lang--float
+          .header__lang.header__lang--float.open
             .header__lang-seleced 
-              img(loading="lazy" src="images/dist/lang-ru.webp", alt="")
+              img(loading="lazy" src="images/dist/kg.webp", alt="")
               svg.icon.icon--stroke
                 use(xlink:href='#angle')
-            .header__lang-dropdown
-              mixin lang(img, link)
-                .header__lang-item
-                  a(href=link) 
-                    img(loading="lazy" src="images/dist/lang-"+img+".webp", alt="") 
-              +lang('ru','#1')    
-              +lang('ru','#2')    
+  
+            .header__lang-dropdown.dropdown
+                
+              p Выберите язык
+              .header__lang-list
+                each lang in langs
+                  .header__lang-item
+                    a(href=lang.link) 
+                      img(loading="lazy" src="images/dist/"+lang.flag+".webp", alt="") 
+                      .header__lang-name=lang.lang
         
 

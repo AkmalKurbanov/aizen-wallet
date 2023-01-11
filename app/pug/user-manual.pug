@@ -1,0 +1,63 @@
+extends layouts/main
+block title
+  | user manual
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .user-manual 
+          .container-lg 
+            .breadcrumbs-seach-control
+              .bread-crumbs
+                ul 
+                  li 
+                    a(href="#") AIZEN
+                    svg.icon
+                      use(xlink:href='#angle')  
+                  li Начало работы с AIZEN  
+              
+              .search
+                form(action="")
+                  .search__input 
+                    input(type="text" placeholder="Поиск")
+                    button(type="submit")
+                      svg.icon.icon--stroke
+                        use(xlink:href='#search')
+
+            h1 Начало работы с AIZEN 
+
+            .user-manual__steps
+              each item, index in userManual
+                .user-manual__step
+                  .user-manual__step-title=item.title
+                  .user-manual__step-wrap
+                    each val in item.items 
+                      .user-manual__step-item
+                        a(href="#")=val
+                  a(href="#").more смотреть всё
+
+            .section
+              .container
+                .txt-img-blur.typical-block
+                  .col-wrap
+                    .col-wrap__col
+                      .txt-img-blur__text
+                        .title
+                          span.part-sh Зарегистрируйте 
+                          span.part-mc учетную запись 
+                          span.part-sh-invert AIZEN
+                        p Загрузите приложение сегодня, чтобы начать тратить и отправлять деньги с помощью AIZEN.
+                        <br>
+                        a.btn.btn--accent(href='#') Начать сейчас
+
+                    .col-wrap__col
+                      .txt-img-blur__img
+                        img(loading="lazy" src='images/dist/txt-blur-card.webp', alt='' with="277" height="207")
+                 
+
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

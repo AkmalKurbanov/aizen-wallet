@@ -1,0 +1,83 @@
+extends layouts/main
+block title
+  | career
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .hero-full-height
+          .container-lg
+            .title.title--drop-shadow.tac
+              span.part-sh Расти 
+              span.part-mc вместе 
+              span.part-sh-invert с нами
+              
+
+        .section-wrap
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .desc-part
+                    p Aizen переосмысливает то, как работает банковское дело. Мы упрощаем управление вашими деньгами, где бы вы ни находились. Мы создаем финансовую свободу для всех, кто живет, работает, путешествует, учится или отправляет деньги за границу. Мы — мобильное приложение, альтернативное банкам, предлагающее счета, которые вы можете открыть мгновенно, чтобы вы не теряли доступ к деньгам, которые вам нужны, каждый раз, когда вы пересекаете границу на карте.
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/career1.webp', alt='' with='575' height='575')
+          
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .desc-part
+                    p Мы зарегистрировали более 2 миллионов человек из 31 страны. Наши мобильные приложения доступны на 14 языках, так что вы можете тратить и экономить как местный житель в любой точке Европейской экономической зоны. Благодаря отличным отзывам и тому, что многие наши клиенты используют нас для получения зарплаты, мы являемся одним из самых популярных и надежных финансовых сервисов в Европе.
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/career2.webp', alt='' with='575' height='575')
+          
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .desc-part
+                    p Мы глобальны и инклюзивны: мы хотим сделать наш сервис доступным для всех и везде. Мы прогрессивны и страстны: мы движемся вперед с энтузиазмом и любопытством. Наш продукт появился благодаря искреннему увлечению тем, что мы делаем. Мы добры и готовы к сотрудничеству: быть чуткими и открытыми в команде — лучший способ добиться цели. Мы честны и справедливы: мы верим в то, что поступаем правильно.
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/career3.webp', alt='' with='575' height='575')
+
+        .section.exception.fadeOut1
+          .vacancies
+            .container 
+              .title.tac
+                span.part-sh Доступные  
+                span.part-mc вакансии
+              .vacancies__wrap
+                each vacancy in vacancies
+                  .vacancies__item
+                    .vacancies__item-title=vacancy.title
+                    .vacancies__item-position
+                      span=vacancy.position 
+                        |  - 
+                      =vacancy.place
+                      
+
+
+              .tac 
+                a(href="#").btn.btn--accent Все вакансии
+
+        .img-link.fadeOut1
+          .container
+            .img-link__list
+              each val, index in ['Прочтите нашу \n историю', 'Посетите наш блог', 'Посмотрите, что мы делаем']
+                a(href="#").img-link__item
+                  img(src="images/dist/career-link"+index+".webp", alt="")
+                  .img-link__item-title=val
+        br  
+        .container-lg.fadeOut1
+          p Aizen — компания, зарегистрированная в Англии и Уэльсе под регистрационным номером 12117096 и зарегистрированным адресом: 1 King Street, London EC2V 8AU. Предоставляя услуги по страхованию и предоставлению кредитов, Aizen выступает в качестве назначенного представителя Resolution Compliance Limited. Компания Resolution Compliance Limited авторизована и регулируется Управлением по финансовому надзору с регистрационным номером.          
+
+
+    include includes/footer/footer-special
+
+
+  include includes/scripts 

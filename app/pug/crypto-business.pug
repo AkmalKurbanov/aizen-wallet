@@ -1,0 +1,134 @@
+extends layouts/main
+block title
+  | crypto business
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        
+          
+        
+        .section
+          .container
+            .col-wrap.section-text-img
+              .col-wrap__col.col-wrap__col--float-right
+                .title
+                  span.part-sh Криптокошелек <br>
+                  span.part-mc для бизнеса 
+                  
+                .desc-part
+                  p Ищете лучший криптокошелек для бизнеса? Установите BitHide и наслаждайтесь полной анонимностью ваших платежей и полным контролем над вашими средствами.
+                <br>
+                a(href="#").btn.btn--light Установить AIZEN 
+              .col-wrap__col
+                .section-text-img__img
+                  img(loading='lazy' src='images/dist/crypto1.webp', alt='' with='575' height='575')
+                    
+        .section.fadeOut2
+          .container 
+            .title.tac
+              span.part-sh Как 
+              span.part-mc работают <br> 
+              span.part-sh-invert криптовалютные кошельки?
+            p.tac Криптокошелек - это программное обеспечение, хранящее ваши закрытые ключи и позволяющее <br>
+              | вам принимать платежи в криптовалюте, включая дальнейшие операции с этими средствами. <br>
+              | Почему вы не можете использовать частный криптокошелек для бизнеса? Это связано с <br>
+              | автоматизацией, которую требует криптокошелек для бизнеса.
+            <br>
+            .triple-block  
+                each item in crypto
+                  .triple-block__item-wrap  
+                    .triple-block__item
+                      .triple-block__item-title=item.title
+                      .triple-block__item-desc=item.desc 
+                      svg.icon
+                        use(xlink:href='#'+item.icon)
+            <br>
+            p.tac Как только вы решите, что ваш бизнес хочет принимать криптовалюты, следующим шагом будет <br> выбор подходящего криптокошелька, принимающего криптовалюту для бизнеса.
+
+        .hero-full-height
+          .container
+            .title.title--drop-shadow.tac
+              span.part-sh Как выбрать <br>
+              span.part-mc правильный криптокошелек <br>
+              span.part-sh-invert для своего бизнеса?
+            p.tac Сравнивая различные криптокошельки, вы можете обратить внимание на такие важные вещи, как <br>
+              | анонимность, безопасность, контроль и удобство. Итак, давайте разберемся, что это значит для <br>
+              | вашего бизнеса и как BitHide справляется с этими задачами.
+
+        .section-wrap
+          .section.section--float
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-mc Анонимность 
+
+                  .desc-part
+                    p К сожалению, не все криптокошельки анонимны, хотя большинство из них утверждают, что это так. Это означает, что третьи лица могут отследить конкретные транзакции, переданные через ваш кошелек, и определить структуру кошелька, чтобы при необходимости идентифицировать даже всех ваших клиентов.
+                  
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/crypto2.webp', alt='')
+                    
+          .section.section--float
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-mc Безопасность 
+
+                  .desc-part
+                    p Безопасность криптокошелька для бизнеса связана с безопасностью набора приватных ключей, необходимых для доступа к вашему счету. Это означает, что безопасный криптокошелек тщательно хранит все данные (как приватные ключи, так и данные о транзакциях), но при этом имеет резервный вариант на случай непредвиденных обстоятельств.
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/crypto3.webp', alt='')
+
+          .section.section--float
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-mc Контроль 
+
+                  .desc-part
+                    p Хороший криптокошелек для бизнеса позволяет осуществлять управляемый контроль над транзакциями и вести соответствующий учет.
+
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/crypto4.webp', alt='')
+
+        .section
+          .container
+            .col-wrap.section-text-img
+              .col-wrap__col
+                .title
+                  span.part-sh Как я могу 
+                  span.part-mc отслеживать 
+                  span.part-sh-invert свои криптокошельки и 
+                  span.part-mc транзакции? 
+                .desc-part
+                  p Чтобы управлять всеми транзакциями, независимо от того, от какого продавца они поступили, в одном месте, необходимо использовать криптокошелек для бизнеса, который может принимать данные от нескольких продавцов и позволяет создавать своевременные отчеты по вашим записям.
+                
+              .col-wrap__col
+                .section-text-img__text.typical-block
+                  p Познакомьтесь с  
+                    span Aizen
+                  ul 
+                    li Позволяет добавлять несколько платформ в один аккаунт
+                    li Позволяет создавать сводные балансовые отчеты по платформам, периодам или другим характеристикам
+                    li Резервное копирование всех сохраненных данных, включая приватные ключи
+                    li Позволяет выводить средства с помощью API и функции автовывода средств
+                    li Разграничение прав доступа пользователей             
+        
+         
+                    
+        include includes/txt-section
+        include includes/feedback
+        
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

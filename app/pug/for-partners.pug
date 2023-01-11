@@ -1,0 +1,71 @@
+extends layouts/main
+block title
+  | for partners
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .hero-full-height
+          .container-lg
+            .title.title--drop-shadow.tac
+              span.part-sh Стать партнером  
+              span.part-mc Aizen 
+
+        .section-wrap
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Отправьте нам 
+                    span.part-mc свое предложение
+                  .desc-part
+                    p Сотрудничайте с нами, и пусть ваш бизнес говорит с нашими заинтересованными клиентами. Напишите нам свою идею партнерства, и мы свяжемся с вами, если сочтем, что она может подойти!
+                  .block-control
+                    a(href='#').btn.btn--accent.btn--arrow Отправить запрос
+                      svg.icon
+                        use(xlink:href='#arrow')
+                    
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/for-partners1.webp', alt='' with='575' height='575')
+        
+        .section.advantages.fadeOut1
+          .container-lg
+            .title.tac
+              span.part-sh Почему 
+              span.part-mc Aizen
+            br
+            .advantages__wrap
+              each val, index in ['Мы открыли счета мобильных денег в 31 стране','70% необходимо придумать текст максимум на две строчки','Мы являемся одним из самых популярных и надежных финансовых сервисов в Европе.']
+                .advantages__item
+                  .advantages__item-img 
+                    img(src="images/dist/advantage"+index+".webp", alt="")
+
+                  .advantages__item-desc.typical-block=val
+
+        
+        .section-wrap
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Медиа-кит
+                  .desc-part
+                    p Для получения дополнительной информации вы можете найти наши медиаресурсы 
+                      a(href="#") здесь
+                      |.
+                  
+                    
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/card-in-hand.webp', alt='' with='575' height='575')
+        
+        include includes/gradient-section
+    
+    include includes/footer/footer-special
+
+
+  include includes/scripts 

@@ -1,0 +1,742 @@
+extends layouts/main
+block title
+  | online-payments
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .hero-full-height
+          .container-lg
+            .title.title--drop-shadow.tac
+              div
+                span.part-sh Приём платежей <br> 
+                span.part-mc для бизнеса
+            p.tac Сделайте платежи доступными, чтобы покупатель увидел что-то <br> нужное — и сразу заплатил
+
+        .payments 
+          .container
+            .payments__item.fadeOut2
+              .title
+                div
+                  svg.icon.link
+                    use(xlink:href='#link')
+                div
+                  span.part-sh Банковские 
+                  span.part-mc карты
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    div
+                      span.part-sh Visa, Mastercard, 
+                      span.part-sh-invert  Maestro, Элкарт, Мир
+
+                  .circle-img
+                    .circle-img__list
+                      each payment in [1,2,3,4,5]
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment"+payment+".webp", alt="" with="60" height="60")
+
+                  .payments__desc
+                    p Покупатель может заплатить максимум 250 000 С за один раз, в месяц — 500 000 С одной банковской картой.  
+                  
+                  .payments__btn-wrap
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      |Текстовая инструкция  
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 2,8%
+                    p При обороте больше 3 млн ₽
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    div
+                      svg.icon.link
+                        use(xlink:href='#flash')
+                    div
+                      span.part-sh Система  
+                      span.part-mc быстрых платежей
+
+                  .payments__desc
+                    p Оплата через приложение банка, без ввода платёжных данных. Максимум 1 000 000 С за операцию.
+                 
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 0%
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+    
+            .payments__item.fadeOut1
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+
+                    .circle-img
+                      .circle-img__list
+                        each payment in [6,7]
+                          .circle-img__img 
+                            img(loading="lazy" src="images/dist/payment"+payment+".webp", alt="" with="60" height="60")
+
+                    div
+                      span.part-sh Apple Pay   
+                      span.part-mc и Google Pay
+
+                  .payments__desc
+                    p Бесконтактная оплата со смартфонов. Ограничения те же, что для платежей банковскими картами.
+
+                  .payments__btn-wrap
+                    a(href="#").payments__btn Подробнее об Apple Pay  
+                    
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      | Как оплатить  через Apple Pay
+
+                    a(href="#").payments__btn Подробнее о Google Pay 
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 2,8%
+                    p При обороте больше 3 млн ₽  
+                    a(href="#").btn.btn--accent Подключить Aizen
+           
+            .payments__item.fadeOut1
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+
+                    .circle-img
+                      .circle-img__list
+                        each payment in [8]
+                          .circle-img__img 
+                            img(loading="lazy" src="images/dist/payment"+payment+".webp", alt="" with="60" height="60")
+
+                    div
+                      span.part-sh American    
+                      span.part-mc Express
+
+                  .payments__desc
+                    p Покупатель может заплатить максимум 250 000 C за один раз, в месяц — 500 000 C одной банковской картой.
+                  .payments__btn-wrap
+                    
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      | Текстовая инструкция
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 4%
+                    p При обороте больше 3 млн ₽  
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+                        
+            .payments__item.fadeOut1
+              .title
+                div
+                  svg.icon.link
+                    use(xlink:href='#link')
+                div
+                  span.part-sh Электронные  
+                  span.part-mc деньги
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment9.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh Aizen 
+                      span.part-mc money
+
+                  .payments__desc
+                    h2 Идентифицированный кошелёк
+                    p До 250 000 C за один раз, 600 000 C в сутки, 3 млн C в месяц.
+
+                    h2 Именной кошелёк
+                    p До 60 000 C за один раз, 300 000 C в сутки, 1 млн C в месяц.
+                  
+                    h2 Анонимный кошелёк
+                    p До 15 000 C за один раз, 300 000 C в сутки, 500 000 C в месяц.
+                  
+                  .payments__btn-wrap
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      |Текстовая инструкция  
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 2,8%
+                    p При обороте больше 3 млн ₽
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .title
+                div
+                  svg.icon.link
+                    use(xlink:href='#link')
+                div
+                  span.part-sh Электронные  
+                  span.part-mc деньги
+              
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment10.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh Элсом 
+                      span.part-mc Кошелек
+
+                  .payments__desc
+                    p За один раз можно заплатить до 250 000 C.
+                  
+                  .payments__btn-wrap
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      |Текстовая инструкция  
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 5%
+                    p При обороте больше 3 млн ₽
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+            
+            .payments__item.fadeOut1
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment11.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh О деньги 
+                      span.part-mc Кошелек
+
+                  .payments__desc
+                    p За один раз можно заплатить до 250 000 C.
+                  
+                  .payments__btn-wrap
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      |Текстовая инструкция  
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 5%
+                    p При обороте больше 3 млн ₽
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment12.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh MegaPay 
+                      span.part-mc Кошелек
+
+                  .payments__desc
+                    p За один раз можно заплатить до 250 000 C.
+                  
+                  .payments__btn-wrap
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      |Текстовая инструкция  
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 5%
+                    p При обороте больше 3 млн ₽
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment13.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh Balance.kg 
+                      span.part-mc Кошелек
+
+                  .payments__desc
+                    p За один раз можно заплатить до 250 000 C.
+                  
+                  .payments__btn-wrap
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      |Текстовая инструкция  
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 5%
+                    p При обороте больше 3 млн ₽
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment14.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh PayPal 
+                      span.part-mc Кошелек 
+                      span.part-sh-invert Скоро!
+
+                  .payments__desc
+                    p За один раз можно заплатить до 250 000 C.
+                  
+                  .payments__btn-wrap
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      |Текстовая инструкция  
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 5%
+                    p При обороте больше 3 млн ₽
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .title
+                div
+                  svg.icon.link
+                    use(xlink:href='#link')
+                div
+                  span.part-sh Наличные
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    div
+                      span.part-sh Оплата 
+                      span.part-mc в терминалах и кассах
+
+                  .payments__desc
+                    p Оплата по коду платежа в терминале, банкомате или кассе банка, а также в салонах связи и системах денежных переводов — везде, где принимают платежи в пользу Aizen.
+                    p До 15 000 С за один раз.
+                  
+                  .payments__btn-wrap
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      |Текстовая инструкция  
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 5%
+                    p При обороте больше 3 млн ₽
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .title
+                div 
+                  svg.icon.link
+                    use(xlink:href='#link')
+                div
+                  span.part-sh Интернет - 
+                  span.part-mc банки
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment15.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh Demir Bank
+
+                  .payments__desc
+                    p Платежи для пользователей СберБанка Онлайн с подтверждением в приложении или смс.
+
+                    p За один раз и в сутки можно заплатить до 1 млн С с подтверждением в приложении и до 10 000 С — по смс.
+                  
+                  .payments__btn-wrap
+                    a(href="#").payments__btn
+                      | Подробнее об SberPay  
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      | Как оплатить  через SberPay  
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 3,5%
+                    p При обороте больше 3 млн ₽
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .payments__wrap
+                .payments__col
+                  
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment16.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh Optima Bank
+
+                  .payments__desc
+                    p Интернет-банк Альфа-Банка.
+                    p За один раз можно заплатить до 200 000 С.
+
+                  .payments__btn-wrap
+                     
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      | Текстовая инструкция
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 3,5%
+                    p При обороте больше 3 млн ₽
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .payments__wrap
+                .payments__col
+                  
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment17.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh MBank
+
+                  .payments__desc
+                    p Интернет-банк MBank. За один раз можно заплатить до 600 000 С.
+                    
+                  .payments__btn-wrap
+                     
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      | Текстовая инструкция
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 3,5%
+                    p При обороте больше 3 млн ₽
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+          
+            .payments__item.fadeOut1
+              .payments__wrap
+                .payments__col
+                  
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment18.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh Bakai Bank
+
+                  .payments__desc
+                    p Интернет-банк Bakai Bank. За один раз можно заплатить до 600 000 С.
+                  .payments__btn-wrap
+                     
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      | Текстовая инструкция
+
+                .payments__col
+                  .payments__total
+                    .payments__total-per от  
+                      span 3,5%
+                    p При обороте больше 3 млн ₽
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .title
+                div
+                  span.part-sh Кредитование 
+                  span.part-mc покупателей
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment19.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh Заплатить по частям 
+                      span.part-mc Скоро!
+
+
+                  .payments__desc
+                    p Продажи в кредит. Всё онлайн: покупатель выбирает способ оплаты «Заплатить по частям», заполняет анкету, получает решение и подтверждает покупку смс-кодом. Деньги приходят на ваш расчётный счет на следующий рабочий день.
+                    p За один раз можно заплатить от 3000 до 150 000 С.
+                    p Подключается по API Aizen, есть много дополнительных возможностей, которые помогают увеличить конверсию
+                  .payments__btn-wrap
+                     
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      | Как подключить
+
+                .payments__col
+                  .payments__total
+                    
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .title
+                div
+                  svg.icon.link
+                    use(xlink:href='#link')
+                div
+                  span.part-sh Баланс 
+                  span.part-mc телефона
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment20.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh Beeline
+
+                  .payments__desc
+                    p За один раз можно заплатить до 14 000 С, в сутки — до 15 000 С, в месяц — до 40 000 С (либо меньше — зависит от категории товаров и услуг).
+                  .payments__btn-wrap
+                     
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      | Как подключить
+
+                .payments__col
+                  .payments__total
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment21.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh Megacom
+
+                  .payments__desc
+                    p За один раз можно заплатить до 14 000 С, в сутки — до 15 000 С, в месяц — до 40 000 С (либо меньше — зависит от категории товаров и услуг).
+                  .payments__btn-wrap
+                     
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      | Как подключить
+
+                .payments__col
+                  .payments__total
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+            
+            .payments__item.fadeOut1
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment11.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh O! 
+
+                  .payments__desc
+                    p За один раз можно заплатить до 14 999 С, в сутки — до 30 000 С, в месяц — до 40 000 С (либо меньше — зависит от категории товаров и услуг).
+                  .payments__btn-wrap
+                     
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      | Как подключить
+
+                .payments__col
+                  .payments__total
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            .payments__item.fadeOut1
+              .title
+                div 
+                  svg.icon.link
+                    use(xlink:href='#link')
+                div
+                  span.part-sh B2B - 
+                  span.part-mc платежи
+              .payments__wrap
+                .payments__col
+                  .title.title--min
+                    .circle-img
+                      .circle-img__list
+                        .circle-img__img 
+                          img(loading="lazy" src="images/dist/payment23.webp", alt="" with="60" height="60")
+                    div
+                      span.part-sh СберБизнес 
+
+                  .payments__desc
+                    p Приём платежей от юридических лиц — через аккаунт СберБанка, с мгновенным подтверждением оплаты.
+                    p Этим способом можно получить не больше 5 млн С в сутки.
+                  .payments__btn-wrap
+                     
+                    a(href="#").payments__btn
+                      svg.icon(fill="B0B2B2")
+                        use(xlink:href='#document') 
+                      | Подробнее о B2B-платежах
+
+                .payments__col
+                  .payments__total
+                    a(href="#").btn.btn--accent Подключить Aizen
+                    br   
+                    a(href="#").more Посмотреть тарифы
+                      svg.icon
+                        use(xlink:href='#angle') 
+
+            
+
+        .section.fadeOut1.exception
+          .container 
+            .title.title--drop-shadow.tac
+              div
+                span.part-sh Как пополнить
+
+            .block-count-icon.block-count-icon--accent-bg
+              each item, index in payments
+                .block-count-icon__item.typical-block
+                     
+                    .block-count-icon__item-title
+                      .block-count-icon__item-icon 
+                        svg.icon.icon--stroke
+                          use(xlink:href='#replenishments'+index)
+                      =item.title
+                    .block-count-icon__item-desc=item.desc
+
+        .gradient-section
+          .container.jcc-fdc
+            .gradient-section__desc
+              h2.gradient-section__title.tac Работает не только в Кыргызстане
+              p.tac Если ваш бизнес не в России, а в другой стране, подключить ЮKassa тоже можно. Всё очень похоже на условия для российских компаний, но есть разные валютные схемы, способов приёма платежей чуть меньше, для подключения нужно больше документов.
+            div.tac
+              a(href="#").btn.btn--light Подробнее 
+
+    include includes/txt-section
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

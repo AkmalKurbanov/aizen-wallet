@@ -1,0 +1,48 @@
+extends layouts/main
+block title
+  | support customers
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .banner(style="background-image: url('images/dist/banner.webp')")
+
+          .search.fadeOut1
+            form(action="")
+              .search__input 
+                input(type="text" placeholder="Поиск")
+                button(type="submit")
+                  svg.icon.icon--stroke
+                    use(xlink:href='#search')  
+        
+        .section.fadeOut2
+          .container-lg
+            .tabs-link
+              each item in ['Начало работы с AIZEN','Как использовать AIZEN','Получить максимум от AIZEN']
+                .tabs-link__item.typical-block
+                  a(href="#")=item 
+
+        .section
+          .container
+            .txt-img-blur.typical-block
+              .col-wrap
+                .col-wrap__col
+                  .txt-img-blur__text
+                    .title
+                      span.part-sh Зарегистрируйте 
+                      span.part-mc учетную запись 
+                      span.part-sh-invert AIZEN
+                    p Загрузите приложение сегодня, чтобы начать тратить и отправлять деньги с помощью AIZEN.
+                    <br>
+                    a.btn.btn--accent(href='#') Начать сейчас
+
+                .col-wrap__col
+                  .txt-img-blur__img
+                    img(loading="lazy" src='images/dist/txt-blur-card.webp', alt='' with="277" height="207")
+    
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

@@ -1,0 +1,44 @@
+.feedback
+  &__textarea
+    border: rem(1) solid $textcolor
+    min-height: rem(200)
+    outline: none
+    resize: none
+    width: 100%
+    padding: rem(15) rem(25)
+    color: $white
+
+  &__form
+    @include aife-jfcsb
+
+    @include xs
+      flex-direction: column
+    
+    &-col
+      width: 100%
+      
+      &:first-child
+        @include aife
+
+      &:last-child
+        max-width: rem(260)
+        margin-left: rem(20)
+
+        @include xs
+          max-width: 100%
+          margin-left: 0
+          margin-top: rem(20)
+        
+        input
+          margin-bottom: rem(10)
+          
+          @include xs
+            margin-bottom: rem(20)
+
+        .btn
+          width: 100% 
+
+    h3
+      margin-bottom: rem(20)
+      color: $accentcolor
+      font-size: rem(20)

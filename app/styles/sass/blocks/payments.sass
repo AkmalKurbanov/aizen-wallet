@@ -1,0 +1,175 @@
+.payments
+  .title
+    @include aic
+
+    &--min
+      @include lg
+        margin-bottom: rem(10)
+
+    .circle-img
+      padding: 0
+      margin-right: rem(15)
+      &:before,
+      &:after
+        display: none
+
+      .circle-img__list
+        margin-right: 0
+
+  &__item
+    margin-bottom: rem(100)
+
+    @include lg
+      margin-bottom: rem(80)
+
+    @include md
+      margin-bottom: rem(60)
+
+    @include sm
+      margin-bottom: rem(60)
+
+    @include xs
+      margin-bottom: rem(40)
+
+  &__wrap
+    @include aife-jfcsb
+
+    @include sm
+      flex-direction: column
+
+  &__col
+    &:first-child
+      width: 58.5%
+
+      @include sm
+        width: 100%
+
+    &:last-child
+      width: calc( 41.5% - 80px )
+
+      @include lg
+        width: calc( 41.5% - 40px )
+
+      @include md
+        width: calc( 41.5% - 20px )
+      
+      @include sm
+        width: 100%  
+        margin-top: rem(30)
+
+  &__desc
+    padding: rem(20) 0
+    p
+      margin-bottom: rem(20)
+      &:last-child
+        margin-bottom: 0
+    h2
+      font-weight: 500
+      font-size: rem(22)
+      color: $white
+      margin-bottom: rem(3)
+      @include lg
+        font-size: rem(20)
+
+      @include md
+        font-size: rem(19)
+      
+      @include sm
+        font-size: rem(18)
+      
+      @include xs
+        font-size: rem(17)
+
+
+
+  &__btn-wrap
+    @include fww
+
+  &__btn
+    background: rgba(255, 255, 255, 0.1)
+    backdrop-filter: blur(16px)
+    @include aic-jcc
+    color: $white
+    display: inline-flex
+    padding: rem(10) rem(15)
+    transition: $transition
+    margin-right: rem(30)
+    margin-bottom: rem(30)
+
+    @include lg
+      margin-right: rem(20)
+      margin-bottom: rem(20)
+      font-size: rem(15)
+      padding: rem(7) rem(10)
+    
+    @include md
+      font-size: rem(14)
+
+    @include sm
+      font-size: rem(13)
+
+
+    &:last-child
+      margin-bottom: 0
+
+    .icon
+      margin-right: rem(10)
+      fill: $textcolor
+      width: rem(25)
+      height: rem(25)
+      transition: $transition
+
+    &:hover
+      background-color: $accentcolor
+
+      .icon
+        fill: $white
+
+  &__total
+    border-left: rem(1) solid $textcolor
+    padding: rem(10) 0 rem(10) rem(80)
+
+    @include lg
+      padding-left: rem(40)
+
+    @include md
+      padding: rem(5) 0 rem(5) rem(20)
+
+    @include xs 
+      padding: 0   
+      border: none
+
+    &-per
+      font-size: rem(16)
+      color: $accentcolor
+      margin-bottom: rem(10)
+
+      span
+        font-size: rem(24)
+        color: $white
+        margin: 0 rem(5)
+
+        @include lg
+          font-size: rem(20)
+    p
+      margin-bottom: rem(15)
+    .btn
+      margin-bottom: rem(15)
+      
+      @include lg
+        font-size: rem(15)
+      
+      @include sm
+        font-size: rem(14)
+
+      @include xs
+        font-size: rem(13)
+        min-height: rem(35)
+    
+    .more
+      color: $accentcolor
+      .icon
+        transform: rotate(-90deg)
+        width: rem(12)
+        stroke: $accentcolor
+        margin-bottom: rem(-4)

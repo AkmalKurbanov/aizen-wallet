@@ -1,0 +1,42 @@
+.footer.footer--special
+  .container-lg
+    .col-wrap
+      .col-wrap__col
+        .footer__nav
+          .footer__nav-item
+            .footer__item-title Карьера с Aizen
+            ul.footer__item-list
+              each val in ['Начнем','Поехали','Люди','Работа','Конфиденциальность данных','Управление файлами cookie']
+                li
+                  a(href="#")=val
+              
+
+      .col-wrap__col
+        .footer__special-img
+          img(src="images/dist/footer-special.webp", alt="")
+    .footer__bottom.fadeOut1
+      .footer__bottom-col-wrap 
+        .footer__lang 
+          .footer__lang-active Русский 
+            svg.icon.icon--stroke
+              use(xlink:href='#angle')
+          ul.footer__lang-dropdown
+            each lang in langs 
+              li 
+                a(href=lang.link)=lang.lang 
+        .social 
+          ul 
+            each social in socials 
+              li 
+                a(href=social.link)
+                  svg
+                    use(xlink:href=`#${social.img}`)
+                    
+
+
+
+      .footer__copyright!=copyright
+ 
+
+
+  

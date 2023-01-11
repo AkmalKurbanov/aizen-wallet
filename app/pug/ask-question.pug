@@ -1,0 +1,71 @@
+extends layouts/main
+block title
+  | ask a question
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .hero-full-height
+          .container-lg
+            .title.title--drop-shadow.tac
+              span.part-mc Свяжись 
+              span.part-sh с нами  
+              
+            p.tac Наша дружная команда поддержки клиентов всегда готова
+
+        .section-wrap
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-mc Есть 
+                    span.part-sh вопрос?
+                    
+                  .desc-part
+                    p Посетите наш раздел часто задаваемых вопросов, чтобы найти множество ответов на некоторые из наиболее распространенных вопросов наших клиентов. Это самый быстрый способ получить ответ, который вы ищете!
+                  
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/ask1.webp', alt='' with='575' height='575')
+                    
+          
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-mc Чат из вашего 
+                    span.part-sh приложения
+                    
+                  .desc-part
+                    p Начните разговор с нашей дружной службой поддержки через свое приложение. Нажмите на верхний левый значок в приложении, затем «Получить помощь». Если вы не можете найти ответ, который ищете, вы можете легко начать чат в приложении с нами!
+                  
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/ask2.webp', alt='' with='575' height='400')
+                    
+         
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-mc Напишите 
+                    span.part-sh нам
+                    
+                  .desc-part
+                    p Напишите нам по адресу support@aizen.com , и мы свяжемся с вами, как только сможем — просто убедитесь, что вы отправляете сообщение с того же адреса электронной почты, который вы использовали для открытия учетной записи AIZEN.
+                  
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/ask3.webp', alt='' with='575' height='360')
+                    
+        include includes/feedback
+        
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

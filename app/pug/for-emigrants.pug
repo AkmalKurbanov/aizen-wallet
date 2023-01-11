@@ -1,0 +1,163 @@
+extends layouts/main
+block title
+  | for emigrants
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .hero-full-height
+          .container-lg
+            .title.title--drop-shadow.tac
+              span.part-mc Aizen - 
+              span.part-sh Эмигрант 
+              
+        .section
+          .container
+            .col-wrap.section-text-img
+              .col-wrap__col
+                .title
+                  span.part-sh Получите <br>
+                  span.part-mc учетную запись <br>
+                  span.part-sh-invert Aizen
+                .desc-part
+                  p Вы выбрали Expatrio для своего путешествия в Германию. Теперь вам нужен текущий банковский счет. Пришло время зарегистрировать вашу учетную запись Aizen.
+                
+              .col-wrap__col
+                .section-text-img__img
+                  img(loading='lazy' src='images/dist/for-emigrants1.webp', alt='' with='575' height='575')  
+        
+        .hero-full-height
+          .container.tac
+            .title.tac
+              span.part-sh Зарегистрироваться в 
+              span.part-mc Aizen 
+            p Откройте свой счет в Aizen до прибытия в новый город.
+            br
+            .tac
+              a(href="#").btn.btn--light.fadeOut2 Зарегистрироваться
+
+        .section.fadeOut1.exception
+          .container 
+            .title.title--drop-shadow.tac
+              div
+                span.part-sh Как открыть счет 
+                span.part-mc в Aizen 
+                span.part-sh-invert до прибытия в новый город
+
+            .block-count-icon.block-count-icon--accent-bg
+              each item, index in emigrants
+                .block-count-icon__item.typical-block
+                     
+                    .block-count-icon__item-title
+                      .block-count-icon__item-icon 
+                        svg.icon.icon--stroke
+                          use(xlink:href='#emigrant'+index)
+                      =index+1+". "   
+                      =item.title
+                    .block-count-icon__item-desc=item.desc
+
+        .section-wrap 
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Автоматическая 
+                    span.part-mc ежемесячная 
+                    span.part-sh-invert выплата 
+                  .desc-part
+                    p Ваша учетная запись Aizen будет автоматически связана с вашей заблокированной учетной записью Expatrio, поэтому вы сразу же сможете начать получать ежемесячные выплаты.
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/for-emigrants2.webp', alt='' with='575' height='575')
+          
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Получите бесплатный  
+                    span.part-mc тарифный план Classic 
+                  .desc-part
+                    p Вы получите наш план Classic бесплатно на 12 месяцев! Вам не нужно ничего делать, ваша учетная запись будет автоматически обновлена. Чтобы узнать больше о том, что включает в себя план, ознакомьтесь с нашими ценами .
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/for-emigrants3.webp', alt='' with='575' height='575')
+          
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Узнать   
+                    span.part-mc больше  
+                  .desc-part
+                    p Для получения дополнительной информации об этом предложении ознакомьтесь с часто задаваемыми вопросами Expatrio или свяжитесь с их службой поддержки по электронной почте service@expatrio.com .
+                    p Если вам необходимо отправить какие-либо документы для открытия учетной записи Aizen, отправьте их по адресу 
+                      a(href="#") expatriodocuments@aizen.com
+                      | . 
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/ask2.webp', alt='' with='575' height='575')
+          
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Мгновенные уведомления о ваших    
+                    span.part-mc расходах за границей   
+                  .desc-part
+                    p Получайте мгновенные уведомления во время путешествий, чтобы точно знать, сколько вы потратили с помощью мультивалютной карты для путешествий и сколько у вас осталось. В приложении Aizen мы также покажем вам оптовый обменный курс вашей транзакции, чтобы вы знали, сколько вы потратили в местной валюте.
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/travel-map4.webp', alt='' with='575' height='575')
+
+          .section.exception
+            .txt-section 
+              .container
+                .title.tac
+                  span.part-mc Часто задаваемые вопросы о проездных картах 
+                  
+                p.tac Прочитайте ответы на распространенные вопросы о проездных картах ниже. Дополнительную информацию о том, как работает Aizen, можно найти в разделе часто задаваемых вопросов . У нас также есть многоязычная служба поддержки , которая поможет вам во время путешествия.
+                 
+                .accordion
+                  mixin item(title)
+                    .accordion__item
+                      .accordion__title=title
+                        svg.icon.icon--stroke
+                          use(xlink:href='#angle')
+                      .accordion__desc
+                        mixin p(p)
+                          p=p
+                        block
+                        
+                  +item('Что такое проездной?')
+                    +p('Проездная карта — это карта, на которую вы можете предварительно загрузить деньги, чтобы взять их с собой за границу. Также известная как туристическая денежная карта или мультивалютная карта, вы можете использовать ее, чтобы тратить или снимать деньги, которые вы добавляете, так же, как и с дебетовой картой дома.')
+                    +p('Туристические карты идеально подходят для составления бюджета во время отпуска, поскольку вы можете потратить ровно столько, сколько на них загружено. Это не похоже, например, на кредитную карту, которая может облегчить увлечение и перерасход. Использование проездной карты также безопаснее и удобнее, чем носить с собой много наличных денег. Вы можете выбрать валюту для пополнения карты в зависимости от пункта назначения и заранее зафиксировать обменный курс. По прибытии ваша проездная карта будет работать в любой банкомате, магазине или ресторане, которые принимают платежную сеть вашей карты.')
+                  
+                  +item('')
+                    +p('lorem')
+
+                  +item('Является ли Aizen проездным?')
+                    +p('lorem')
+
+                  +item('Каковы преимущества предоплаченной проездной карты?')
+                    +p('lorem')
+
+                  +item('Какие валюты я могу добавить на карту Aizen Travel Money?')
+                    +p('lorem')
+
+                  +item('Сколько стоит проездной?')
+                    +p('lorem')
+
+                  +item('Что, если у меня закончатся деньги?')
+                    +p('lorem')
+
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

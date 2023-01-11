@@ -21,7 +21,7 @@
 
   &.sticky
     &:before
-      opacity: 1    
+      opacity: 1
   .has-attachment
     .icon
       margin-top: rem(2)
@@ -43,12 +43,10 @@
     a
       &:hover
         color: $accenthover!important
-    
 
   .header__content-item.current
     a
       color: $accenthover
-
 
   &__wrap
     @include aistr-jfcsb
@@ -67,7 +65,7 @@
       margin-right: rem(20)
     @include xs
       max-width: rem(100)
-      min-width: rem(100)    
+      min-width: rem(100)
     a
       @include aic-jcc
 
@@ -414,9 +412,6 @@
         opacity: 1
         pointer-events: inherit
         z-index: 9
-        
-       
-          
 
         @include xs
           top: 0!important
@@ -428,12 +423,19 @@
     &--float
       margin-right: 0
 
+      .header__lang-dropdown
+        right: 0
+        left: auto
+        &::before
+          left: auto
+          right: rem(25)
+
     &-list
       @include fww-jfcsb
 
   &__lang-seleced
     position: relative
-    padding: 0 rem(20)
+    padding: rem(10) rem(20)
     cursor: pointer
     @include aic-jcc
     z-index: 999
@@ -469,15 +471,14 @@
     top: 50%
     border-radius: $borderradius12
     left: rem(-5)
-    
+
     @include lg
       right: rem(-15)
       left: auto
 
       &:before
-       left: auto!important
-       right: rem(12)
-           
+        left: auto!important
+        right: rem(12)
 
     @include xs
       position: fixed!important
@@ -496,9 +497,6 @@
       margin-bottom: rem(20)
       text-align: center
       font-size: rem(15)
-
-
-
 
   &__lang-item
     margin-bottom: rem(20)
