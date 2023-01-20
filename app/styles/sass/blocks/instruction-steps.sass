@@ -1,0 +1,137 @@
+.instruction-steps
+  .col-wrap__col
+
+    @include lg
+      width: calc( 50% - 10px )
+
+    @include md
+      width: calc( 50% - 7px )
+
+    @include sm
+      width: 100%
+
+    &:first-child
+      @include md
+        margin-bottom: rem(20)
+    
+    .col-wrap
+      @include sm
+        flex-direction: row
+
+      .col-wrap__col
+        @include sm
+          width: calc( 50% - 7px )!important
+
+        &:first-child
+          margin-bottom: 0  
+
+    
+
+  .icon
+    width: rem(40)
+    height: rem(40)
+
+  .typical-block 
+    padding: rem(24)  
+    color: $white
+    display: flex
+    flex-direction: column
+    justify-content: center
+    line-height: rem(15)
+    min-height: rem(110)
+    z-index: -1
+    
+    @include lg
+      padding: rem(14)  
+      font-size: rem(14)
+
+    @include md
+      padding: rem(12)  
+      font-size: rem(12)
+
+    span
+      font-size: rem(20)
+      line-height: normal
+      margin-bottom: rem(10)
+      
+      @include lg
+        font-size: rem(18)
+
+      @include md
+        font-size: rem(16)
+        line-height: rem(14)
+
+  &__title
+    color: $white
+    font-weight: 500
+    font-size: rem(30)
+
+    span
+      @include aic-jfcsb
+      width: rem(150)
+      margin: rem(20) auto    
+
+      .icon
+        transform: rotate(90deg)
+        
+        &:first-child
+          transform: rotate(90deg) rotateX(180deg)
+          
+    &--sub
+      font-size: rem(24)
+      margin-bottom: rem(10)
+
+      @include lg
+        font-size: rem(22)
+
+      @include md
+        font-size: rem(20)
+
+      @include sm
+        font-size: rem(18)
+
+      @include xs
+        font-size: rem(16)
+
+  
+  &__wrap
+    @include aistr-jfcsb
+    flex-wrap: wrap
+    
+  &__item
+    width: calc( 25% - 10px )
+    margin-right: rem(20)
+    
+    @include lg
+      margin-right: rem(10)
+
+    @include sm
+      width: calc( 33.33% - 10px )
+
+    @include xs
+      width: calc( 50% - 10px )
+
+    
+    &:last-child
+      margin-right: 0
+      .instruction-steps__item-number
+        .icon 
+          display: none
+
+
+    &-number
+      font-weight: 600
+      font-size: rem(60)
+      color: $accentcolor
+      @include aic-jcc
+      margin-bottom: rem(-43)
+      z-index: 9
+      position: relative
+      
+      @include lg
+        margin-bottom: 0
+
+      .icon
+        margin-left: rem(5)
+    
+    

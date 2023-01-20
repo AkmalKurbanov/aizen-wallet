@@ -68,17 +68,25 @@
 
   &--out-of-bounds
     margin-top: rem(120)
-    
+    overflow: visible
     img
       position: absolute
       top: 50%
       right: 0
       transform: translateY(-50%)
-      width: 100%
+      width: rem(167)
+      height: rem(345)
       object-fit: contain
+      
+      @include lg
+        height: rem(300)
+
+      @include md
+        height: rem(250)
       
       @include sm
         position: relative
+        height: rem(200)
 
     .col-wrap__col
       &:first-child

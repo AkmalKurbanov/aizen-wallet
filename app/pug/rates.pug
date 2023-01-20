@@ -1,0 +1,483 @@
+extends layouts/main
+block title
+  | rates
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .hero-full-height
+          .container-lg
+            .title.title--drop-shadow.tac
+              span.part-mc Тарифы  
+              span.part-sh Aizen  
+              
+            p.tac Найдите подходящий для вас
+        
+        .container-lg
+          .txt-img-blur.typical-block
+            .col-wrap
+              .col-wrap__col
+                .txt-img-blur__text
+                  .title.title--min
+                    div
+                      span.part-sh Новинка: 
+                      span.part-mc Создайте свой кредитный рейтинг 
+                      span.part-sh-invert без кредитной карты 
+                  p Постройте свою кредитную историю и приумножьте свои сбережения с помощью Aizen Credit Builder.
+                  <br>
+                  a.btn.btn--accent(href='#') Подробнее
+              .col-wrap__col
+                .txt-img-blur__img
+                  img(loading='lazy' src='images/dist/rate.webp', alt='' width="156")
+
+        .rates 
+          .container-lg
+            .rates__wrap
+              each rate, index in rates
+                .rates__item-wrap
+                  .rates__item
+                    .rates__item-img 
+                      img(src="images/dist/rate-card"+index+".webp", alt="")
+                    div
+                      .rates__title=rate.kind
+                      .rates__price=rate.price
+                        span / месяц
+                      .rates__desc 
+                        p=rate.desc1
+                        p=rate.desc2
+                    
+                    div
+                      a(href="#").btn.btn--light Выберите 
+                        =rate.kind   
+            br
+            br
+            .title.tac
+              span.part-sh Почему 
+              span.part-mc Aizen
+
+            .rates__advantages-wrap
+              table.rates__advantages.typical-block 
+                thead 
+                  tr 
+                    th
+                      h2 Платежи и переводы
+                    th 
+                      h3 Простой
+                    th 
+                      h3 классический
+                    th 
+                      h3 Премиум
+                
+                tbody 
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Мгновенные переводы с Aizen на Aizen
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')     
+                    td 
+                      p.p-accent БЕСПЛАТНО
+                    td 
+                      p.p-accent БЕСПЛАТНО
+                    td 
+                      p.p-secondary БЕСПЛАТНО
+                  tr 
+                    td
+                      p.rates__advantages-advantage Международные переводы
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')  
+                    td 
+                      p 
+                        span 2% 
+                        | комиссия
+                    td 
+                      p Комиссия от 
+                        span 0,5%%
+                    td 
+                      p.p-secondary БЕСПЛАТНО
+                  tr 
+                    td
+                      p.rates__advantages-advantage Местные трансферы туда и обратно
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')  
+                    td
+                      p.p-accent БЕСПЛАТНО 
+                    td
+                      p.p-accent БЕСПЛАТНО 
+                    td
+                      p.p-secondary БЕСПЛАТНО 
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Регулярные платежи и прямой дебет
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')  
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.yellow
+                        use(xlink:href='#checkmark')
+                
+                tbody
+                  tr 
+                    td 
+                      h2 Кредит
+                  tr 
+                    td     
+                      p.rates__advantages-advantage Персональные кредиты
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')  
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark') 
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark') 
+                    td 
+                      svg.icon.icon--stroke.yellow
+                        use(xlink:href='#checkmark') 
+                  tr 
+                    td     
+                      .rates__advantages-advantage Кредитный Строитель
+                        div.new НОВИНКА
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')  
+                    td 
+                      p Ежемесячная плата <br>
+                        span 250 с стерлингов<br>
+                        | (Респ. 9,10% годовых)*
+                    td 
+                      p Ежемесячная плата <br>
+                        span 250 с стерлингов<br>
+                        | (Респ. 9,10% годовых)*
+                    td 
+                      p Ежемесячная плата <br>
+                        span 250 с стерлингов <br>
+                        | (Респ. 9,10% годовых)*
+                  tr
+                    td(colspan="2")
+                    td(colspan="2")
+                      p(style="text-align: right") *Репрезентативный пример: ссуда, как часть услуги Credit Builder, представляет собой ссуду с процентной <br>
+                        | ставкой 0%, но на финансовом жаргоне абонентская плата относится к 28,2% годовых, поскольку это <br>
+                        | стоимость вашего Credit Builder. Это основано на сумме кредита в размере 6000 сом стерлингов.
+
+                tbody 
+                  tr 
+                    td 
+                      h2 Страхование
+                  tr 
+                    td
+                      p.rates__advantages-advantage Страхование от несчастных случаев, болезней, вынужденной безработицы
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#cross')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.yellow
+                        use(xlink:href='#checkmark')        
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Пребывание в больнице
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#cross')
+                    td 
+                      p 
+                        span £40 в день 
+                        | до 30 дней
+                    td 
+                      p 
+                        span £60 в день 
+                        | на 30 дней
+
+                  tr
+                    td
+                      p.rates__advantages-advantage Защита покупки
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#cross')
+
+                    td
+                      p 
+                        span До 1000 сом стерлингов за иск 2500 <br> сом стерлингов в год <br>
+                        |Покупка, совершенная за последние <br> 120 дней 50 сом стерлингов
+                    
+                    td
+                      p 
+                        span До 5000 сом стерлингов за иск 2500 <br> сом стерлингов в год <br>
+                        |Покупка, совершенная за последние <br> 180 дней 50 сом стерлингов
+
+                tbody 
+                  tr  
+                    td 
+                      h2 Открытки
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Бесконтактная дебетовая карта
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')    
+                    td 
+                      p Стандартная карта
+                    td 
+                      p Голографическая окантовка  
+                    td 
+                      p.p-secondary Премиум карта  
+                  tr 
+                    td
+                      p.rates__advantages-advantage Доставка первой карты
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')  
+                    td 
+                      p.p-accent 4,95 сом стерлингов       
+                    td 
+                      p.p-accent БЕСПЛАТНО
+                    td 
+                      p.p-secondary БЕСПЛАТНО
+                  tr 
+                    td
+                      p.rates__advantages-advantage Замена карт
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')  
+                    td 
+                      p.p-accent 4,95 сом стерлингов      
+                    td 
+                      p.p-accent 4,95 сом стерлингов
+                    td 
+                      p.p-secondary БЕСПЛАТНО
+                  tr 
+                    td
+                      p.rates__advantages-advantage Расходы по карте в иностранной валюте
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')  
+                    td 
+                      p
+                        span 2000 БЕСПЛАТНО в 
+                        | месяц      
+                    td 
+                      p.p-accent БЕСПЛАТНО
+                    td 
+                      p.p-secondary БЕСПЛАТНО
+                  tr 
+                    td
+                      p.rates__advantages-advantage GooglePay/ЭпплПей
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')  
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.yellow
+                        use(xlink:href='#checkmark')
+                  tr 
+                    td
+                      p.rates__advantages-advantage Виртуальная дебетовая карта
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')  
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.yellow
+                        use(xlink:href='#checkmark')
+                  tr 
+                    td
+                      p.rates__advantages-advantage Пополнения дебетовой карты
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')  
+                    td 
+                      p 
+                        span 0,3%
+                    td 
+                      p.p-accent БЕСПЛАТНО
+                    td 
+                      p.p-secondary БЕСПЛАТНО
+
+                tbody 
+                  tr 
+                    td 
+                      h2 Денежные средства
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Снятие в банкомате
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info') 
+
+                    td 
+                      p 
+                        span 5000 БЕСПЛАТНО в 
+                        | месяц
+                    td 
+                      p 
+                        span до 50 000 БЕСПЛАТНО в 
+                        | месяц
+                    td 
+                      p.p-secondary до 150 000 БЕСПЛАТНО в месяц
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Пополнение наличными
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info') 
+
+                    td 
+                      p 
+                        span 3,5% 
+                        | комиссия
+                    td 
+                      p 
+                        span до 40 000 БЕСПЛАТНО в 
+                        | месяц
+                    td 
+                      p.p-secondary до 100 000 сом БЕСПЛАТНО в месяц
+
+                tbody 
+                  tr 
+                    td 
+                      h2 Учетные записи
+
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Интеграция с аккаунтом PayPal
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')     
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.yellow
+                        use(xlink:href='#checkmark')
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Интеграция со счетом Avios
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')     
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.yellow
+                        use(xlink:href='#checkmark')
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Счет в GBP, EUR и/или RON 
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')     
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.yellow
+                        use(xlink:href='#checkmark')
+
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Совместные учетные записи с другим пользователем Monese
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')     
+                    td 
+                      p.p-accent БЕСПЛАТНО 
+                    td 
+                      p.p-accent БЕСПЛАТНО
+                    td 
+                      p.p-secondary БЕСПЛАТНО
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Денежные горшки с функцией округления
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')     
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.yellow
+                        use(xlink:href='#checkmark')
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Доступ к процентным сберегательным счетам
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')     
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.yellow
+                        use(xlink:href='#checkmark')
+                  tr 
+
+
+                tbody
+                  tr 
+                    td 
+                      h2 Учетные записи  
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Многоязычная поддержка клиентов
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')     
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#checkmark')
+                    td 
+                      svg.icon.icon--stroke.yellow
+                        use(xlink:href='#checkmark')
+
+
+                  tr 
+                    td 
+                      p.rates__advantages-advantage Многоязычная поддержка клиентов
+                        svg.icon.icon--stroke
+                          use(xlink:href='#info')     
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#cross')
+                    td 
+                      svg.icon.icon--stroke.green
+                        use(xlink:href='#cross')
+                    td 
+                      svg.icon.icon--stroke.yellow
+                        use(xlink:href='#checkmark')
+
+
+        
+
+        include includes/gradient-section
+        
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

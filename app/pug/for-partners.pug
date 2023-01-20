@@ -31,19 +31,20 @@ block main
                   .section-text-img__img
                     img(loading='lazy' src='images/dist/for-partners1.webp', alt='' with='575' height='575')
         
-        .section.advantages.fadeOut1
+        .section.block-info
           .container-lg
             .title.tac
               span.part-sh Почему 
               span.part-mc Aizen
             br
-            .advantages__wrap
+            .block-info__wrap
               each val, index in ['Мы открыли счета мобильных денег в 31 стране','70% необходимо придумать текст максимум на две строчки','Мы являемся одним из самых популярных и надежных финансовых сервисов в Европе.']
-                .advantages__item
-                  .advantages__item-img 
+                .block-info__item
+                  .block-info__item-img 
                     img(src="images/dist/advantage"+index+".webp", alt="")
-
-                  .advantages__item-desc.typical-block=val
+                  .block-info__item-desc-wrap
+                    .block-info__item-desc
+                      p=val
 
         
         .section-wrap

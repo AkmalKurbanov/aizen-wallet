@@ -51,3 +51,22 @@ new Swiper(".comments-js", {
 });
 // slider comments end
 
+
+
+
+// article
+new Swiper(".full-width-js", {
+  effect: 'fade',
+  observer: true,
+  observeParents: true,
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  
+});
+// article end

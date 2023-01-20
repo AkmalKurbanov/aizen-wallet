@@ -1,12 +1,18 @@
-$(".header__lang-dropdown, .header__lang-seleced").on({
-  mouseenter: function () {
-    $(this).parent().addClass('open');
-  },
-  mouseleave: function () {
-    $(this).parent().removeClass('open');
-  }
-});
+if (window.matchMedia('(max-width: 575px)').matches) {
+  $('.header__lang-seleced').on('click', function () {
+    $(this).parent().toggleClass('open');
+  });
+} else {
+  $(".header__lang-dropdown, .header__lang-seleced").on({
+    mouseenter: function () {
+      $(this).parent().addClass('open');
+    },
+    mouseleave: function () {
+      $(this).parent().removeClass('open');
+    }
+  });
 
+}
 
 $('document').mouseup(function (e) {
   var div = $(".header__lang");

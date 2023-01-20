@@ -1,0 +1,114 @@
+extends layouts/main
+block title
+  | blog
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .section
+          .container-lg
+            .swiper.full-width-js
+              .swiper-wrapper
+                .swiper-slide
+                  .col-wrap.section-text-img.section-text-img--slider
+                    .section-text-img__wrap
+                      .col-wrap__col
+                        .title
+                          span.part-sh С Черной <br>
+                          span.part-mc Пятницей!
+                          
+                        .desc-part
+                          p Это самое прекрасное время года для охотников за сделками (*airhorn*)! Последняя пятница ноября приносит много выгодных предложений, но стоит не быть осторожным (*слегка спущенный воздушный гудок*). Читайте о том, что можно и чего нельзя делать при покупках, чтобы избежать хандры из-за Черной пятницы.
+                        .block-control
+                          a(href='#').btn.btn--accent.btn--arrow Learn More
+                            svg.icon
+                              use(xlink:href='#arrow')
+                      .col-wrap__col
+                        .section-text-img__img
+                          img(loading='lazy' src='images/dist/blog1.webp', alt='' with='575' height='575')
+          
+                .swiper-slide
+                  .col-wrap.section-text-img.section-text-img--slider
+                    .section-text-img__wrap
+                      .col-wrap__col
+                        .title
+                          span.part-sh С Черной 1<br>
+                          span.part-mc Пятницей!
+                          
+                        .desc-part
+                          p Это самое прекрасное время года для охотников за сделками (*airhorn*)! Последняя пятница ноября приносит много выгодных предложений, но стоит не быть осторожным (*слегка спущенный воздушный гудок*). Читайте о том, что можно и чего нельзя делать при покупках, чтобы избежать хандры из-за Черной пятницы.
+                        .block-control
+                          a(href='#').btn.btn--accent.btn--arrow Learn More
+                            svg.icon
+                              use(xlink:href='#arrow')
+                      .col-wrap__col
+                        .section-text-img__img
+                          img(loading='lazy' src='images/dist/blog1.webp', alt='' with='575' height='575')
+              .section-text-img-nav
+                .swiper-button-prev.slider-btn
+                .swiper-button-next.slider-btn
+        
+        include includes/last-articles
+        
+        .section
+          .article
+            .container-lg
+              .title.tac
+                span.part-sh Последние 
+                span.part-mc статьи
+
+              .article__wrap
+                .article__col
+                  each item, index in lastArticlesList
+                    .article__item
+                      .article__item-img
+                        img(src="images/dist/last-article"+index+".webp", alt="")
+                      .article__item-desc-wrap
+                        .article__item-desc
+                          span=item.category
+                          h2=item.title
+                          .article__item-desc-bottom
+                            p=item.date
+                            a(href="#").btn.btn--accent Читать полностью  
+                        
+
+
+                .article__col
+                  .article__categories-wrap 
+                    .article__categories 
+                      .title
+                        span.part-mc Категории
+                      
+                      .article__categories-list 
+                        ul
+                          each category in ['Советы и хитрости','Промо акции', 'Компании','Путешествовать','Сообщество','Безопасность','Функции','Люди','Бизнес','Советы и хитрости','Денежные переводы']  
+                            li 
+                              a(href="#").typical-block=category 
+
+
+        .section
+          .container
+            .title.tac
+              span.part-sh Следите за нами <br>
+              span.part-mc в социальных сетях
+              
+            .social-color
+              .social-color__wrap
+                each item in colorSocial
+                  a(href="#").social-color__item
+                    svg.icon
+                      use(xlink:href='#'+item.social)
+                    =item.title  
+
+
+
+        
+        
+        include includes/txt-section
+        include includes/gradient-section
+    
+    include includes/footer/footer
+
+
+  include includes/scripts 

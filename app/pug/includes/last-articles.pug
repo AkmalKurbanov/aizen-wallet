@@ -1,0 +1,22 @@
+.section.block-info
+  .container-lg
+    .title.tac
+      span.part-sh Последние  
+      span.part-mc статьи
+    br
+    .block-info__wrap
+      each item, index in lastArticles 
+        .block-info__item.block-info__item--floated
+          .block-info__item-img 
+            img(src="images/dist/last-article"+index+".webp", alt="")
+          .block-info__item-desc-wrap
+            .block-info__item-desc
+              div
+                span=item.category
+                h2=item.title
+                p=item.desc
+
+              div
+                .block-info__item-btn-wrap
+                  a(href="#").btn.btn--accent Читать полностью  
+                  a(href="#").btn.btn--light  Поделиться

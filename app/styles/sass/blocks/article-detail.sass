@@ -1,0 +1,47 @@
+.article-detail
+  margin-top: rem(70)
+  
+  &__category
+    text-transform: uppercase
+    margin-bottom: rem(10)
+
+    span 
+      color: $accentcolor
+      margin: 0 rem(5)
+
+  &__author-info
+    p
+      span
+        color: $accentcolor 
+
+  &__social
+    margin-top: rem(20)
+
+    ul
+      @include aic
+      display: inline-flex
+      
+      li
+        margin-right: rem(15)
+        
+        &:last-child
+          margin-right: 0
+        
+        a
+          @include aic-jcc
+          .icon
+            width: rem(24)
+            height: rem(24)
+
+
+  &__img
+    max-width: rem(730)
+    width: 100%
+    margin: rem(40) auto
+    padding: 0 rem(15)
+    img
+      width: 100%
+
+  &__content
+    p
+      margin-bottom: rem(20)

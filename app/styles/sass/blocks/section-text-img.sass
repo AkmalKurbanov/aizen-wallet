@@ -31,6 +31,56 @@
 
     &--float-right
       text-align: right
+      @include sm
+        text-align: center
+
+  &--slider
+    padding: rem(1)
+    overflow: hidden
+    border-radius: $borderradius24
+    background: rgb(255,255,255)
+    background: linear-gradient(90deg, rgba(255,255,255,0.13209033613445376) 8%, rgba(255,255,255,1) 100%)
+
+    @include lg
+      border-radius: $borderradius12
+
+    .section-text-img__wrap
+      align-items: stretch
+
+      @include sm
+        flex-direction: column-reverse
+
+      .section-text-img__img
+        height: 100%
+        border-radius: 0 $borderradius24 $borderradius24 0
+        overflow: hidden
+
+        @include lg
+          border-radius: 0 $borderradius12 $borderradius12 0
+
+        @include sm
+          border-radius: $borderradius12 $borderradius12 0 0
+
+        @include xs
+          max-width: 100%
+
+        img
+          object-fit: cover
+          height: 100%
+
+      .col-wrap__col
+
+        @include md
+          max-width: calc( 50% - 10px )
+
+        @include sm
+          max-width: 100%
+
+        &:first-child
+          padding: rem(30) 0 rem(30) rem(30)
+
+          @include sm
+            padding: rem(15)
 
   &__img
     @include aic-jcc
@@ -148,6 +198,9 @@
       text-align: center
 
     .btn
+      &:last-child
+        margin-right: 0
+
       @include xs
         margin-right: 0
         margin-bottom: rem(15)
@@ -360,6 +413,14 @@
         @include xs
           display: none
 
+  &__wrap
+    background-color: $black
+    border-radius: $borderradius24
+    @include aic-jfcsb
+
+    @include lg
+      border-radius: $borderradius12
+
   &__text
     padding: rem(24)
 
@@ -369,8 +430,6 @@
     @include md
       padding: rem(15)
 
-
-
     @include sm
       margin-bottom: rem(30)
 
@@ -378,15 +437,15 @@
       margin-bottom: rem(15)
       font-size: rem(22)
       font-weight: 600
-      
+
       @include lg
         font-size: rem(21)
         margin-bottom: rem(14)
-      
+
       @include md
         font-size: rem(20)
         margin-bottom: rem(13)
-      
+
       @include sm
         font-size: rem(19)
         margin-bottom: rem(12)
@@ -408,15 +467,15 @@
         @include lg
           font-size: rem(17)
           padding-left: rem(14)
-        
+
         @include md
           font-size: rem(16)
           padding-left: rem(13)
-        
+
         @include sm
           font-size: rem(15)
           padding-left: rem(12)
-        
+
         @include xs
           font-size: rem(14)
           margin-bottom: rem(5)
@@ -434,3 +493,38 @@
           background-color: $textcolor
           left: 0
           top: rem(12)
+
+.section-text-img-nav
+  position: absolute
+  @include aic
+  right: rem(50)
+  bottom: rem(-70)
+  width: rem(120)
+  height: rem(30)
+
+  @include sm
+    right: auto
+    left: 50%
+    transform: translateX(-50%)
+    bottom: rem(-50)
+
+  .slider-btn
+    width: rem(15)
+    height: rem(30)
+
+    &:hover
+      &:after
+        color: $accentcolor
+
+    &:after
+      font-size: rem(30)
+      color: $white
+      opacity: 1
+      transition: $transition
+
+      @include sm
+        font-size: rem(20)
+        
+.full-width-js
+  overflow: inherit
+  position: relative

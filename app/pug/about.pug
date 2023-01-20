@@ -1,0 +1,100 @@
+extends layouts/main
+block title
+  | about
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        .hero-full-height
+          .container-lg
+            .title.title--drop-shadow.title--logo
+              span.part-sh Мы  
+              span.part-sh-invert это  
+              svg.icon
+                use(xlink:href='#logoAbout')
+              
+            p.tac Знакомьтесь с нами
+
+        .section-wrap
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Наша 
+                    span.part-mc история 
+                    
+                  .desc-part
+                    p Мы запустились в 2015 году с целью предложить финансовые услуги тем, у кого нет идеальной кредитной истории или подтверждения адреса. Узнайте больше о нашей предыстории и о том, как появился Aizen!
+                  .block-control
+                    a(href='#').btn.btn--accent.btn--arrow Подробнее
+                      svg.icon
+                        use(xlink:href='#arrow')
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/about1.webp', alt='' with='575' height='575')   
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Откройте для себя <br>
+                    span.part-mc наш блог
+                    
+                  .desc-part
+                    p Будьте в курсе всех последних материалов нашего блога, от финансовых советов и рекомендаций до советов по безопасности и путешествиям. И не пропустите основные моменты от нашего сообщества и последние функции, которые появятся в вашем приложении!
+                  .block-control
+                    a(href='#').btn.btn--accent.btn--arrow Подробнее
+                      svg.icon
+                        use(xlink:href='#arrow')
+
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/about2.webp', alt='' with='575' height='575')
+          
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Для  
+                    span.part-mc партнеров
+                    
+                  .desc-part
+                    p Заинтересованы в партнерстве с нами? Мы будем рады услышать вашу идею! Отправьте нам свой питч.
+                  .block-control
+                    a(href='#').btn.btn--accent.btn--arrow Подробнее
+                      svg.icon
+                        use(xlink:href='#arrow')
+                
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/for-partners1.webp', alt='' with='575' height='575')
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Присоединиться <br>
+                    span.part-mc к нашей команде
+                  .desc-part
+                    p Мы всегда в поиске свежих талантов. Если вы заинтересованы в карьере у нас, ознакомьтесь со всеми доступными вакансиями в Европе. Подайте заявку в Aizen сегодня!
+                  .block-control
+                    a(href='#').btn.btn--accent.btn--arrow Написать
+                      svg.icon
+                        use(xlink:href='#arrow')
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/about3.webp', alt='' with='575' height='575')
+
+        include includes/gradient-section
+        include includes/txt-section
+        
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

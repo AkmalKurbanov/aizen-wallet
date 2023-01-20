@@ -8,7 +8,7 @@ block main
         
         .banner(style="background-image: url('images/dist/banner.webp')")
 
-          .search.fadeOut1
+          .search
             form(action="")
               .search__input 
                 input(type="text" placeholder="Поиск")
@@ -16,7 +16,7 @@ block main
                   svg.icon.icon--stroke
                     use(xlink:href='#search')  
         
-        .section.fadeOut2
+        .section
           .container-lg
             .tabs-link
               each item in ['Начало работы с AIZEN','Как использовать AIZEN','Получить максимум от AIZEN']

@@ -1,0 +1,147 @@
+.tabs-aizen
+
+  .tabs
+    padding: 0 rem(15) rem(15)
+    border-bottom: rem(1) solid $white
+    white-space: nowrap
+    overflow-x: auto
+    text-align: center
+
+    &::-webkit-scrollbar
+      width: rem(4)
+
+    &::-webkit-scrollbar-track
+      background: transparent
+
+    &::-webkit-scrollbar-thumb
+      border-radius: rem(2)
+      width: rem(2)
+      background: $accentcolor
+      background: linear-gradient(0deg, rgba($accentcolor, 0.04805672268907568) 0%, rgba($accentcolor, 0.26094187675070024) 70%, rgba($accentcolor, 1) 100%)
+
+  .tab-item
+    max-width: rem(170)
+    width: 100%
+    display: inline-block
+    margin-right: rem(25)
+    
+    @include lg
+      max-width: rem(150)
+
+    @include md
+      max-width: rem(130)
+
+    &:last-child
+      margin-right: 0
+
+    a
+      @include aic-fdc
+
+    span
+      color: $white
+      font-size: rem(20)
+      transition: $transition
+
+      @include lg
+        font-size: rem(19)
+      
+      @include md
+        font-size: rem(18)
+      
+      @include sm
+        font-size: rem(17)
+      
+      @include xs
+        font-size: rem(16)
+
+    .icon
+      width: rem(60)
+      height: rem(60)
+      margin-bottom: rem(10)
+      fill: $white
+      transition: $transition
+
+      @include lg
+        width: rem(55)
+        height: rem(55)
+      
+      @include md
+        width: rem(50)
+        height: rem(50)
+      
+      @include sm
+        width: rem(45)
+        height: rem(45)
+      
+      @include xs
+        width: rem(40)
+        height: rem(40)
+
+    &:hover,
+    &.current
+      span
+        color: $accentcolor
+      .icon
+        fill: $accentcolor
+
+  &__img
+    max-width: rem(380)
+    width: 100%
+    margin-right: rem(60)
+
+    @include lg
+      margin-right: rem(40)
+
+    @include md
+      margin-right: rem(30)
+
+    @include sm
+      margin: auto
+      margin-bottom: rem(30)
+    
+    @include xs
+      max-width: rem(300)
+    img
+      width: 100%
+
+  &__item
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding-top: rem(70)
+
+    @include lg
+      padding-top: rem(60)
+
+    @include md
+      padding-top: rem(50)
+
+    @include sm
+      padding-top: rem(40)
+      flex-direction: column
+
+    @include xs
+      padding-top: rem(40)
+
+    ol,ul
+      padding-left: rem(30)
+    ul
+      li
+        list-style-type: disc
+
+  &__btn-wrap
+    @include aic
+
+    @include xs
+      flex-direction: column
+      align-items: flex-start
+
+    .btn
+      margin-right: rem(30)
+
+      @include xs
+        margin-right: 0
+        margin-bottom: rem(20)
+
+      &:last-child
+        margin: 0

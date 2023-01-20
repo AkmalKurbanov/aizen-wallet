@@ -39,6 +39,21 @@ ul
   li
     list-style: none
 
+.list
+  li
+    position: relative
+    padding-left: rem(15)
+    text-align: left
+    &:before
+      position: absolute
+      content: ''
+      left: 0
+      top: rem(10)
+      width: rem(3)
+      height: rem(3)
+      border-radius: 100%
+      background-color: $textcolor
+
 input,
 button
   outline: none
@@ -158,10 +173,6 @@ p
   @include xs
     margin-bottom: rem(15)
 
-  &--drop-shadow
-    user-select: none
-    filter: drop-shadow(-279px 185px 50px rgba($white, .87))
-
   span
     font-size: rem(48)
     font-weight: 600
@@ -204,8 +215,8 @@ p
   .icon
     stroke: $accentcolor
     width: rem(56)
-    height: rem(56)  
-    
+    height: rem(56)
+
     &.link
       margin-bottom: rem(-10)
       margin-right: rem(15)
@@ -223,13 +234,34 @@ p
       @include sm
         width: rem(35)
         height: rem(35)
-  
+
   &--min
+    @include aic
     span
-      font-size: rem(32)
-      
+      font-size: rem(32)!important
+
       @include lg
-        font-size: rem(22)
+        font-size: rem(22)!important
+
+  &--drop-shadow
+    user-select: none
+    filter: drop-shadow(-279px 185px 50px rgba($white, .87))
+
+  &--logo
+    @include aic-jcc
+    span
+      margin-right: rem(10)
+    .icon
+      width: rem(235)
+      height: rem(109)
+
+      @include lg
+        width: rem(150)
+        height: rem(70)
+
+      @include xs
+        width: rem(100)
+        height: rem(40)
 
 // title end
 
@@ -239,12 +271,12 @@ p
     br
       display: none
   p
-    margin-bottom: rem(20) 
+    margin-bottom: rem(20)
     a
       color: $accentcolor
-    
+
     &:last-child
-      margin-bottom: 0   
+      margin-bottom: 0
 
 // desc part end
 
@@ -253,6 +285,29 @@ p
   @include aifs-jfcsb
   @include xs
     flex-direction: column
+
+  &--half-parts
+    @include aistr
+    
+    @include sm
+      flex-direction: column
+
+    .col-wrap__col
+      width: calc( 50% - 20px )
+
+      &:first-child
+        @include sm
+          margin-bottom: rem(30)
+
+      @include sm
+        width: 100%
+        text-align: center
+
+      .title
+        @include sm
+          display: block
+          text-align: center
+
 // col wrap end
 
 // section
@@ -379,9 +434,9 @@ p
       &:nth-child(2n)
 
         .col-wrap
-          
+
           .col-wrap__col
-            
+
             &:first-child
               text-align: right
               @include sm
@@ -393,11 +448,9 @@ p
 
           &:first-child
             max-width: calc( 73.3% - 100px )
-            
+
             @include sm
               max-width: 100%
-
-            
 
           &:last-child
             max-width: 26.667%
@@ -539,29 +592,22 @@ p
 // input end
 
 // fade on scroll effect
-.fadeOut1,
-.fadeOut2
+
   transform: translateY(50px)
   transition: all 1s ease
   opacity: 0
 
-.fadeOut1
+
   transition-delay: .5s
   @include xs
     transition-delay: 0
 
-.fadeOut2
+
   transition-delay: .7s
   @include xs
     transition-delay: 0
 
-.fadeIn1
-  opacity: 1
-  transform: translateY(0)
 
-.fadeIn2
-  opacity: 1
-  transform: translateY(0)
 // fade on scroll effect end
 
 // typical block
@@ -576,7 +622,6 @@ p
 
 // typical block end
 
-
 // circle img  
 .circle-img
   @include aic
@@ -588,7 +633,7 @@ p
   @include lg
     padding: rem(15) 0
     padding-right: 10%
-  @media (max-width: 450px) 
+  @media (max-width: 450px)
     padding-right: 0
 
   &:before,
@@ -632,9 +677,9 @@ p
       height: rem(50)
       margin-left: calc(-25px + 6px)
 
-    @media (max-width: 450px) 
+    @media (max-width: 450px)
       margin-left: calc(-30px + 6px)
-    
+
     img
       width: 100%
       max-width: 100%

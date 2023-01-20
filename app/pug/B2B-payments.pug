@@ -1,0 +1,118 @@
+extends layouts/main
+block title
+  | B2B payments
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        
+        .section
+          .container
+            .col-wrap.section-text-img
+              .col-wrap__col
+                .title
+                  span.part-sh Платежи <br>
+                  span.part-mc B2B
+                .desc-part
+                  p Почти все интернет-магазины давно принимают безналичную оплату. С одним уточнением – у покупателей-физлиц.
+                  p Для покупателя все удобно – заполнил несколько полей, нажал кнопку "оплатить", забил данные карты.
+              .col-wrap__col
+                .section-text-img__img
+                  img(loading='lazy' src='images/dist/B2B1.webp', alt='' with='575' height='575')
+
+        .section
+          .container-lg
+            .col-wrap.col-wrap--half-parts
+              .col-wrap__col
+                .title.title--min
+                  svg.icon.link
+                    use(xlink:href='#flash') 
+                  div
+                    span.part-sh Что умеет <br>
+                    span.part-mc Операционный офис
+                ul.list
+                  li Обеспечит прием платежей от ваших b2b покупателей прямо на сайте.
+                  li Автоматизирует процесс оформления счёта на сайте.
+                  li Выставит клиенту документы и обеспечит полный документооборот.
+                  li Подтвердит в вашу CMS поступление оплаты.
+                  li Предоставит клиенту отсрочку оплаты за счёт системы.
+                  li Гарантировано перечислит платёж.    
+                  
+
+              
+              .col-wrap__col
+                .title.title--min
+                  svg.icon.link
+                    use(xlink:href='#flash') 
+                  div
+                    span.part-sh Как это выглядит <br>
+                    span.part-mc для продавца?
+                p У интернет-магазина появляется в способах оплаты новая кнопка – "Оплатить по счету". По условиям подключения и работы этот способ не отличается от обычной оплаты картами.    
+
+        .section.instruction-steps
+          .container-lg
+            div
+              .title.tac
+                span.part-sh Как это устроено, <br>
+                span.part-mc показано на инфографике:
+
+              p.tac Aizen размещает на сайте поставщика форму выставления счетов
+              br
+              h2.instruction-steps__title.tac Клиент
+            br 
+            .instruction-steps__wrap
+              each step, index in instructionSteps
+                .instruction-steps__item
+                  .instruction-steps__item-number=index+1
+                    svg.icon
+                      use(xlink:href='#arrowcurved')
+                  .instruction-steps__item-desc.typical-block=step
+            br
+            .col-wrap.col-wrap--half-parts
+              .col-wrap__col
+                .instruction-steps__title.tac AIZEN
+                  .tac
+                    span 
+                      svg.icon
+                        use(xlink:href='#arrowcurved')
+                      svg.icon
+                        use(xlink:href='#arrowcurved')
+                .col-wrap.col-wrap--half-parts
+                  .col-wrap__col
+                    .instruction-steps__title.instruction-steps__title--sub.tac Клиент
+                    .typical-block 
+                      span Авторизует платеж и уведомляет
+                      | Учетную систему (ERP)
+                  .col-wrap__col
+                    .instruction-steps__title.instruction-steps__title--sub.tac Магазин
+                    .typical-block 
+                      span Направляет клиенту бланк доверенности
+                      | и первичные документы, необходимые, для получения товара или услуги
+              
+              .col-wrap__col
+                .instruction-steps__title.tac Магазин
+                  .tac
+                    span 
+                      svg.icon
+                        use(xlink:href='#arrowcurved')
+                      svg.icon
+                        use(xlink:href='#arrowcurved')
+                .col-wrap.col-wrap--half-parts
+                  .col-wrap__col
+                    .instruction-steps__title.instruction-steps__title--sub.tac Магазин (ERP)
+                    .typical-block 
+                      span Получает информацию от AIZEN
+                      | Присваивает заказу статус - “Оплачен”
+                  .col-wrap__col
+                    .instruction-steps__title.instruction-steps__title--sub.tac Магазин
+                    .typical-block 
+                      span Уведомляет склад и торговые точки
+                      
+
+        include includes/txt-section
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

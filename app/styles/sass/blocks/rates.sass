@@ -1,0 +1,275 @@
+.rates
+  margin-top: rem(265)
+
+  @include lg
+    margin-top: rem(240)
+
+  @include md
+    margin-top: rem(220)
+
+  @include sm
+    margin-top: rem(200)
+
+  &__wrap
+    @include aistr-jfcsb
+
+    @include xs
+      flex-direction: column
+
+  &__item-wrap
+    padding: rem(1)
+    width: calc( 33% - 20px )
+    border-radius: $borderradius24
+
+    @include lg
+      border-radius: $borderradius12
+      width: calc( 33% - 10px )
+
+    @include md
+      width: calc( 33% - 5px )
+
+    @include xs
+      max-width: rem(400)
+      width: 100%
+      margin: auto
+      margin-bottom: rem(170)
+      text-align: center
+
+    &:first-child
+      background: rgb(87,66,157)
+      background: linear-gradient(90deg, rgba(87,66,157,1) 0%, rgba(87,66,157,0.3) 36%)
+
+    &:last-child
+      background: rgb(87,66,157)
+      background: linear-gradient(90deg, rgba(87,66,157,0.3) 64%, rgba(87,66,157,1) 100%)
+      margin-bottom: 0
+
+  &__item
+    position: relative
+    overflow: visible
+    padding: rem(60) rem(25) rem(25)
+    border-radius: $borderradius24
+    background-color: #252427
+    height: 100%
+    @include fdc-jfcsb
+
+    @include lg
+      border-radius: $borderradius12
+      padding: rem(60) rem(20) rem(20)
+
+    @include md
+      padding: rem(40) rem(15) rem(15)
+
+    @include sm
+      padding: rem(40) rem(10) rem(10)
+
+    &-img
+      position: absolute
+      left: 0
+      bottom: calc( 100% - 40px )
+      max-width: rem(213)
+      width: 100%
+      
+      img
+        width: 100%
+      
+      @include xs
+        left: 50%
+        transform: translateX(-50%)
+
+    .btn
+      width: 100%
+      text-align: center
+
+  &__title
+    color: $white
+    font-size: rem(40)
+    font-weight: 400
+    margin-bottom: rem(15)
+
+    @include lg
+      font-size: rem(30)
+      margin-bottom: rem(10)
+
+    @include md
+      font-size: rem(22)
+
+  &__price
+    color: $accentcolor
+    font-size: rem(24)
+    margin-bottom: rem(15)
+
+    @include lg
+      font-size: rem(20)
+
+    @include md
+      font-size: rem(16)
+
+    span
+      font-size: rem(13)
+      text-transform: uppercase
+
+  &__desc
+    margin-bottom: rem(20)
+    p
+      margin-bottom: rem(15)
+      font-size: rem(15)
+      line-height: rem(22)
+      color: $white
+      display: inline-block
+
+      @include md
+        font-size: rem(13)
+
+      
+
+      &:last-child
+        margin-bottom: 0
+
+  &__advantages-wrap
+    @include sm
+      margin: auto
+      overflow-x: auto
+
+  &__advantages
+    padding: rem(30)
+    width: 100%
+    
+    @include lg
+      padding: rem(20)
+
+    @include md
+      padding: rem(10)
+
+    @include sm
+      width: rem(720)
+    
+  
+    .new
+      background: rgba(255, 255, 255, 0.1)
+      backdrop-filter: blur(16px)
+      border-radius: rem(8)
+      text-transform: uppercase
+      color: #00B67A!important
+      padding: rem(5) rem(7)
+      display: inline-block
+      font-size: rem(14)
+      text-transform: uppercase
+      margin: 0 rem(5)
+      
+      @include lg
+        font-size: rem(13)
+
+      @include md
+        font-size: rem(12)
+
+      @include sm
+        font-size: rem(11)
+
+
+    thead
+      tr
+        th
+          padding: rem(15) rem(10)
+          &:first-child
+            padding-left: 0
+    tbody
+      tr
+        &:last-child
+          td
+            border-bottom: rem(1) solid #252326
+    td
+      text-align: center
+      padding: rem(15) rem(10)
+
+      @include lg
+        padding: rem(10) rem(5)
+
+      @include md
+        padding: rem(5)
+
+      &:first-child
+        padding-left: 0
+
+      &:first-child
+        text-align: left
+
+    .p-accent
+      color: $accentcolor
+
+    .p-secondary
+      color: #D4AF37
+
+    h2
+      color: $white
+      font-size: rem(30)
+      text-align: left
+
+      @include lg
+        font-size: rem(25)
+
+      @include md
+        font-size: rem(20)
+
+      @include sm  
+        font-size: rem(14)
+
+    h3
+      text-transform: uppercase
+      font-size: rem(14)
+      color: $white
+
+      @include lg
+        font-size: rem(12)
+
+      @include md
+        font-size: rem(10)
+    p
+      font-size: rem(14)
+      line-height: rem(16)
+      @include lg
+        font-size: rem(12)
+
+      @include md
+        font-size: rem(10)
+
+
+      span
+        color: $accentcolor
+
+    &-advantage
+      color: $white
+      @include aic
+      display: inline-flex
+
+    .icon
+      width: rem(30)
+      height: rem(30)
+      margin-left: rem(5)
+      cursor: pointer
+
+      &.green,
+      &.yellow
+        width: rem(55)
+        height: rem(55)
+        margin-left: 0
+
+        @include lg
+          width: rem(40)
+          height: rem(40)
+
+        @include md
+          width: rem(35)
+          height: rem(35)
+
+        @include sm  
+          width: rem(25)
+          height: rem(25)
+
+      &.green
+        stroke: #00B67A
+
+      &.yellow
+        stroke: #D4AF37
+
+      

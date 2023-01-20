@@ -1,0 +1,61 @@
+.social-color
+
+  &__wrap
+    @include fww-jfcsb
+    max-width: rem(920)
+    width: 100%
+    margin: auto
+    
+    @include xs 
+      max-width: rem(270)
+
+  &__item
+    @include aic
+    color: $white
+    font-size: rem(20)
+    width: calc( 25% - 30px )
+    margin-top: rem(60)
+    transition: $transition
+
+    @include lg
+      font-size: rem(18)
+      width: calc( 25% - 20px )
+      margin-top: rem(50)
+    
+    @include md
+      font-size: rem(16)
+      width: calc( 25% - 10px )
+      margin-top: rem(40)
+
+    @include sm  
+      font-size: rem(14)
+      width: calc( 33.33% - 10px )
+      margin-top: rem(30)
+
+    @include xs  
+      font-size: rem(12)
+      width: calc( 50% - 7px )
+
+    &:hover
+      color: $accentcolor
+
+    .icon
+      min-width: rem(48)
+      height: rem(48)
+      margin-right: rem(15)
+      
+      @include lg
+        min-width: rem(45)
+        height: rem(45)
+
+      @include md
+        min-width: rem(42)
+        height: rem(42)
+      
+      @include sm
+        min-width: rem(35)
+        height: rem(35)
+
+      @include xs
+        min-width: rem(30)
+        height: rem(30)

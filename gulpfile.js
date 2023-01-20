@@ -36,8 +36,10 @@ import imageminWebp from 'imagemin-webp'
 import changed from 'gulp-changed'
 import concat from 'gulp-concat'
 import rsync from 'gulp-rsync'
+import pugInheritance from 'gulp-pug-inheritance'
 import pug from 'gulp-pug'
-import extReplace from 'gulp-ext-replace'
+
+
 
 
 
@@ -170,7 +172,7 @@ function buildcopy() {
 function pug2html() {
 	let dataFromFile = JSON.parse(Fs.readFileSync('app/pug/includes/data.json'));
 	return src('app/pug/*.pug')
-
+		// .pipe(pugInheritance({ basedir: './app/pug/', skip: 'node_modules' }))
 		.pipe(
 			pug({
 				doctype: 'html',

@@ -1,0 +1,190 @@
+.article
+  &__wrap
+    @include aifs-jfcsb
+
+    @include md
+      flex-direction: column-reverse
+
+  &__col
+    
+    @include md
+      width: 100%
+
+    &:first-child
+      width: 100%
+      margin-right: rem(60)
+      
+      @include lg
+        margin-right: rem(30)
+
+      @include md
+        margin-top: rem(40)
+        margin-right: 0
+
+  &__item
+    @include aifs
+    margin-bottom: rem(60)
+    
+    @include xs
+      flex-direction: column
+
+    &:nth-child(2n)
+      .article__item-desc-wrap
+        @include xs
+          background: linear-gradient(90deg, rgba(87,66,157,0.3617822128851541) 64%, rgba(87,66,157,1) 100%)
+
+    &:last-child
+      margin-bottom: 0
+        
+
+    &-desc-wrap
+      padding: rem(2)
+      border-radius: $borderradius24
+      background: rgb(87,66,157)
+      background: linear-gradient(90deg, rgba(87,66,157,1) 0%, rgba(87,66,157,0.3617822128851541) 36%)
+      overflow: hidden
+      width: 100%
+
+      @include lg
+        border-radius: $borderradius12
+
+    &-desc
+      background-color: #242326
+      border-radius: $borderradius24
+      padding: rem(24)
+
+      @include lg
+        border-radius: $borderradius12
+        padding: rem(15)
+
+      @include xs
+        text-align: center
+        padding: rem(10)
+        
+      span,h2
+        margin-bottom: rem(15)
+        display: block
+        
+        @include lg
+          margin-bottom: rem(10)
+
+
+
+      span
+        text-transform: uppercase
+        color: $accentcolor
+        font-size: rem(14) 
+      
+      h2
+        font-size: rem(22)
+        color: $white
+        
+        @include lg
+          font-size: rem(16)
+          line-height: rem(20)
+
+
+      &-bottom
+        @include aic-jfcsb
+        
+        @include md
+          flex-direction: column
+          align-items: flex-start
+        
+        @include xs
+          align-items: center
+        
+        p
+          font-size: rem(16) 
+
+          @include md
+            margin-bottom: rem(10)
+
+    &-img
+      min-width: rem(200)
+      height: rem(180)
+      margin-right: rem(60)
+      border-radius: $borderradius24
+
+      @include lg
+        border-radius: $borderradius12
+        margin-right: rem(30)
+        min-width: rem(150)
+        height: rem(130)
+      
+      @include xs
+        margin: auto
+        margin-bottom: rem(20)
+        max-width: rem(200)
+        min-width: rem(200)
+        height: rem(180)
+
+      img
+        height: 100%
+        width: 100%
+        object-fit: contain
+
+  &__categories-wrap
+    padding: rem(2)
+    background: rgb(87,66,157)
+    background: linear-gradient(90deg, rgba(87,66,157,0.3617822128851541) 64%, rgba(87,66,157,1) 100%)
+    border-radius: $borderradius24
+    max-width: rem(330)
+    min-width: rem(270)
+    width: 100%
+
+    @include lg 
+      border-radius: $borderradius12
+
+    @include md
+      max-width: 100%
+      min-width: auto
+
+  
+  &__categories
+    background-color: #242326
+    border-radius: $borderradius24
+    padding: rem(30)
+        
+    @include lg 
+      border-radius: $borderradius12
+      padding: rem(15)
+
+    .title
+      @include lg
+        margin-bottom: rem(10)  
+
+      span
+        @include lg
+          font-size: rem(30)
+
+    &-list
+      ul
+        li
+          margin-bottom: rem(20)
+          
+          @include md
+            display: inline-block
+            margin-bottom: rem(10)
+
+          
+          &:last-child
+            margin-bottom: 0
+          a 
+            @include aic-jcc
+            display: inline-flex
+            border-radius: $borderradius12
+            text-align: center
+            color: $textcolor
+            padding: rem(10) rem(30)
+            transition: $transition
+            
+            @include lg 
+              padding: rem(7) rem(15)
+            
+            @include xs
+              font-size: rem(13)
+              padding: rem(7) rem(10)
+
+            &:hover
+              background-color: $accentcolor 

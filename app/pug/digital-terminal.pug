@@ -1,0 +1,177 @@
+extends layouts/main
+block title
+  | digital terminal
+block main
+  .wrapper
+    .content
+        include includes/header/header
+        
+        
+        .section
+          .container
+            .col-wrap.section-text-img
+              .col-wrap__col.col-wrap__col--float-right
+                .title
+                  span.part-sh Цифровой <br>
+                  span.part-mc терминал 
+                  
+                .desc-part
+                  p Принимайте платежи в оффлайн точках без терминала
+                  p Клиенту достаточно отсканировать и оплатить по QR выставленный счет
+                  p Без абонплат и дополнительного оборудования
+                <br>
+                a(href="#").btn.btn--light Создать QR терминал  
+              .col-wrap__col
+                .section-text-img__img
+                  img(loading='lazy' src='images/dist/digital-terminal1.webp', alt='' with='575' height='575')
+
+        .section
+          .container 
+            .block-count-icon.block-count-icon--accent-bg
+              each item in digitalterminal
+                .block-count-icon__item.typical-block
+                    
+                    .block-count-icon__item-title
+                      .block-count-icon__item-icon 
+                        svg.icon.icon--stroke
+                          use(xlink:href='#digitalterminal'+item.icon)
+                      =item.title
+                    .block-count-icon__item-desc=item.desc
+
+        .section
+          .container
+            .col-wrap.section-text-img
+              .col-wrap__col
+                .desc-part
+                  p Продавец отправляет счет с необходимой суммой на QR
+                  p Достаточно указать сумму и в случае необходимости указать назначение платежа
+                  p Клиент считывает QR, выбирает платежный метод и проводит оплату
+                  p Возможно добавить популярные платежные методы для быстрой оплаты или даже разрешить оплатить в рассрочку онлайн
+                  p Продавец получит уведомление про успешный платеж клиента
+                  p Можно выставлять следующий счет на QR-код
+
+                .block-control
+                  a(href='#').btn.btn--accent.btn--arrow Попробовать
+                    svg.icon
+                      use(xlink:href='#arrow')
+              .col-wrap__col
+                .section-text-img__img
+                  img(loading='lazy' src='images/dist/business-account3.webp', alt='' with='575' height='575')
+
+
+
+        .section 
+          .container 
+            .title.tac
+              span.part-sh Для кого 
+              span.part-mc подходит?
+            br
+            .clickable-tabs
+
+              .tab.tabs-aizen
+                .tabs
+                  each item in tabs
+                    .tab-item
+                      a(href="#")
+                        svg.icon
+                          use(xlink:href='#'+item.icon)
+                        span=item.title
+                .tab-content
+                  mixin content(item)
+                    .tab-content-item
+                      .tabs-aizen__item
+                        .tabs-aizen__img 
+                          img(src="images/dist/digital-terminal2.webp", alt="")
+
+                        .tabs-aizen__desc
+                          p=item 
+                          p Создание QR-кода в несколько кликов
+                          p Можно создать один или несколько QR для столиков или касс. Достаточно указать название, выбрать куда принимать платежи и платежные методы для клиента
+                          br
+                          ol 
+                            li Зарегистрируйтесь в WayForPay 
+                            li Создайте и настройте QR терминал 
+                            li Разместите QR для клиентов 
+
+                          br
+                          p Выставляйте счета и контролируйте оплаты
+
+                          br
+                          .tabs-aizen__btn-wrap 
+                            a(href="#").btn.btn--accent Рассчитать стоимоть
+                            a(href="#").btn.btn--light Видео
+                  +content(1)
+                  +content(2)
+                  +content(3)
+                  +content(4)
+                  +content(5)
+                  +content(6)
+
+
+        
+        .section-wrap 
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Программный <br>
+                    span.part-mc РРО (ПРРО)
+                  .desc-part
+                    p Возможно добавить программный РРО (ПРРО) и каждый платеж будет автоматически фискализироваться
+                  .block-control
+                    a(href='#').btn.btn--accent.btn--arrow Больше про пРРО
+                      svg.icon
+                        use(xlink:href='#arrow')
+
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/digital-terminal3.webp', alt='' with='575' height='575') 
+
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Продавайте даже <br>
+                    span.part-mc в рассрочку 
+                  .desc-part
+                    p Популярные платежные методы. Google Pay и Apple Pay для быстрой оплаты. Даже возможно продавать в рассрочку онлайн, без каких либо дополнительных договоров и интеграций
+                  .block-control
+                    a(href='#').btn.btn--accent.btn--arrow Доступные платежные методы
+                      svg.icon
+                        use(xlink:href='#arrow')
+                .col-wrap__col
+                  .section-text-img__img
+                    img(loading='lazy' src='images/dist/digital-terminal4.webp', alt='' with='575' height='575')
+
+
+          .section
+            .container
+              .col-wrap.section-text-img
+                .col-wrap__col
+                  .title
+                    span.part-sh Что на счет <br>
+                    span.part-mc комиссии?
+                  .desc-part
+                    p Только за успешные платежи. Никаких абонплат и дополнительного оборудования
+                  .block-control
+                    a(href='#').btn.btn--accent.btn--arrow Подключить
+                      svg.icon
+                        use(xlink:href='#arrow')
+                .col-wrap__col
+                  .section-text-img__img.big-img
+                    img(loading='lazy' src='images/dist/digital-terminal5.webp', alt='' with='575' height='575')
+
+          
+
+
+        include includes/txt-section
+        
+
+    include includes/footer/footer
+
+
+  include includes/scripts 

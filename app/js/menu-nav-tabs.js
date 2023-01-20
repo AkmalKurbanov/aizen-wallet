@@ -18,7 +18,7 @@ $(document).ready(function () {
     }
 
     $('.header__menu-item .tab .tab-item a').hover(tabFuction);
-    $('.transfer .tab .tab-item a').click(tabFuction);
+    $('.transfer .tab .tab-item a, .clickable-tabs .tab .tab-item a').click(tabFuction);
 
   })(jQuery);
 
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
 
 
-  $(".attachment-trigger-js--hover, .header__item-dropdown").on({
+  $(".attachment-trigger-js--hover, .header__item-dropdown,.header__item-content").on({
     mouseenter: function () {
       $('.attachment-trigger-js').not(this).parent().removeClass('open');
       $(this).parent().addClass('open');
